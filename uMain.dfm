@@ -15,6 +15,13 @@ object frmMain: TfrmMain
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 438
+    Width = 31
+    Height = 13
+    Caption = 'Label1'
+  end
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
@@ -183,6 +190,8 @@ object frmMain: TfrmMain
     OptionsBehavior.Common.AllowExpandAnimation = True
     OptionsBehavior.Common.AllowSelectLinks = True
     OptionsBehavior.NavigationPane.Collapsible = True
+    ExplicitTop = 132
+    ExplicitHeight = 325
     object dxNavBar1Group1: TdxNavBarGroup
       Caption = #1576#1610#1575#1606#1575#1578' '#1575#1604#1605#1608#1592#1601
       SelectedLinkIndex = -1
@@ -1732,5 +1741,9 @@ object frmMain: TfrmMain
     VisibleButtons = [dxbnPrior, dxbnNext, dxbnInsert, dxbnDelete, dxbnEdit, dxbnPost, dxbnCancel, dxbnRefresh]
     Left = 640
     Top = 24
+  end
+  object Timer1: TTimer
+    Left = 168
+    Top = 432
   end
 end

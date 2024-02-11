@@ -3,7 +3,7 @@ unit uMain;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, 
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs,
   dxBar, dxRibbon, dxRibbonForm, dxRibbonSkins, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxClasses, dxRibbonBackstageView, cxBarEditItem,
   dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel,
@@ -76,10 +76,8 @@ type
     dxNavBar1Group3: TdxNavBarGroup;
     dxNavBar1Group4: TdxNavBarGroup;
     dxNavBar1Item1: TdxNavBarItem;
-    dxNavBar1Item2: TdxNavBarItem;
     dxNavBar1Item3: TdxNavBarItem;
     dxNavBar1Item4: TdxNavBarItem;
-    dxNavBar1Item5: TdxNavBarItem;
     dxNavBar1Item6: TdxNavBarItem;
     dxNavBar1Item7: TdxNavBarItem;
     dxNavBar1Item8: TdxNavBarItem;
@@ -101,6 +99,7 @@ type
     dxNavBar1Item13: TdxNavBarItem;
     dxNavBar1Item14: TdxNavBarItem;
     dxNavBar1Item15: TdxNavBarItem;
+    dxNavBar1Item2: TdxNavBarItem;
     procedure dxSkinChooserGalleryItem1SkinChanged(Sender: TObject;
       const ASkinName: string);
     procedure btPriorClick(Sender: TObject);
@@ -121,6 +120,10 @@ type
     procedure dxNavBar1Item12Click(Sender: TObject);
     procedure dxNavBar1Item13Click(Sender: TObject);
     procedure dxNavBar1Item14Click(Sender: TObject);
+    procedure dxNavBar1Item6Click(Sender: TObject);
+    procedure dxNavBar1Item7Click(Sender: TObject);
+    procedure dxNavBar1Item8Click(Sender: TObject);
+    procedure dxNavBar1Item2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -140,13 +143,18 @@ var
   b: integer;
   h: integer;
   z: integer;
+  n: integer;
+  m: integer;
+  w: integer;
+  a :integer;
 
 implementation
 
 {$R *.dfm}
 
 uses uEmp, uCharge, uData, uFamille, uData2, uEdEmp, uRecret, uCorps, uGrade,
-  uCateg, uEchlon, uGroup;
+  uCateg, uEchlon, uGroup, uPrime, uRetenue, uLogin, uSalair, uIndemnite,
+  uEdfamille;
 
 { TForm2 }
 procedure TfrmMain.Edit;
@@ -190,7 +198,8 @@ end;
 
 procedure TfrmMain.btInsertClick(Sender: TObject);
 begin
-   dxBarDBNavInsert1.DoClick;
+  // dxBarDBNavInsert1.DoClick;
+   frmEdEmp.Show;
 end;
 
 procedure TfrmMain.btNextClick(Sender: TObject);
@@ -215,7 +224,40 @@ end;
 
 procedure TfrmMain.dxBarButton1Click(Sender: TObject);
 begin
-frmEmp.cxGrid1Level1.Visible:=false;
+frmEmp.cxGrid1Level1.Visible:=true;
+frmEmp.cxGrid1Level2.Visible:=false;
+
+frmFamille.cxGrid1Level1.Visible:=true;
+frmFamille.cxGrid1Level2.Visible:=false;
+
+frmFamille.cxGrid1Level3.Visible:=true;
+frmFamille.cxGrid1Level4.Visible:=false;
+
+frmGroupe.cxGrid1Level1.Visible:=true;
+frmGroupe.cxGrid1Level2.Visible:=false;
+
+frmGrade.cxGrid1Level1.Visible:=false;
+frmGrade.cxGrid1Level2.Visible:=true;
+
+frmCateg.cxGrid1Level1.Visible:=false;
+frmCateg.cxGrid1Level2.Visible:=true;
+
+frmEchlon.cxGrid1Level1.Visible:=true;
+frmEchlon.cxGrid1Level2.Visible:=false;
+
+frmCorp.cxGrid1Level1.Visible:=true;
+frmCorp.cxGrid1Level2.Visible:=false;
+
+frmRecretem.cxGrid1Level1.Visible:=true;
+frmRecretem.cxGrid1Level2.Visible:=false;
+
+
+
+end;
+
+procedure TfrmMain.dxBarButton2Click(Sender: TObject);
+begin
+frmEmp.cxGrid1Level1.visible:=false;
 frmEmp.cxGrid1Level2.Visible:=true;
 
 frmFamille.cxGrid1Level1.Visible:=false;
@@ -224,19 +266,25 @@ frmFamille.cxGrid1Level2.Visible:=true;
 frmFamille.cxGrid1Level3.Visible:=false;
 frmFamille.cxGrid1Level4.Visible:=true;
 
+frmGroupe.cxGrid1Level1.Visible:=false;
+frmGroupe.cxGrid1Level2.Visible:=true;
 
-end;
+frmGrade.cxGrid1Level1.Visible:=True;
+frmGrade.cxGrid1Level2.Visible:=False;
 
-procedure TfrmMain.dxBarButton2Click(Sender: TObject);
-begin
-frmEmp.cxGrid1Level1.visible:=true;
-frmEmp.cxGrid1Level2.Visible:=false;
+frmCateg.cxGrid1Level1.Visible:=true;
+frmCateg.cxGrid1Level2.Visible:=false;
 
-frmFamille.cxGrid1Level1.Visible:=true;
-frmFamille.cxGrid1Level2.Visible:=false;
+frmEchlon.cxGrid1Level1.Visible:=false;
+frmEchlon.cxGrid1Level2.Visible:=true;
 
-frmFamille.cxGrid1Level3.Visible:=true;
-frmFamille.cxGrid1Level4.Visible:=false;
+frmCorp.cxGrid1Level1.Visible:=false;
+frmCorp.cxGrid1Level2.Visible:=true;
+
+frmRecretem.cxGrid1Level1.Visible:=false;
+frmRecretem.cxGrid1Level2.Visible:=true;
+
+
 end;
 
 procedure TfrmMain.dxNavBar1Item11Click(Sender: TObject);
@@ -291,6 +339,7 @@ end;
 
 procedure TfrmMain.dxNavBar1Item1Click(Sender: TObject);
 begin
+ // frmCharge.Visible:=true;
 for o := 0 to frmMain.MDIChildCount-1 do
 if frmMain.MDIChildren[o].Name='frmCharge' then
 frmMain.MDIChildren[o].Close;
@@ -299,6 +348,18 @@ frmEmp:=TfrmEmp.Create(frmMain);
 frmEmp.BringToFront;
 //frmCharge.hide;
 
+end;
+
+procedure TfrmMain.dxNavBar1Item2Click(Sender: TObject);
+begin
+ // frmCharge.Visible:=true;
+for a := 0 to frmMain.MDIChildCount-1 do
+if frmMain.MDIChildren[a].Name='frmCharge' then
+frmMain.MDIChildren[a].Close;
+frmCharge.bringtofront;
+frmIndemnite:=TfrmIndemnite.Create(frmMain);
+frmIndemnite.BringToFront;
+//frmCharge.hide;
 end;
 
 procedure TfrmMain.dxNavBar1Item3Click(Sender: TObject);
@@ -320,6 +381,42 @@ frmMain.MDIChildren[t].Close;
 frmCharge.bringtofront;
 frmRecretem:=TfrmRecretem.Create(frmMain);
 frmRecretem.BringToFront;
+end;
+
+procedure TfrmMain.dxNavBar1Item6Click(Sender: TObject);
+begin
+ // frmCharge.Visible:=true;
+for n := 0 to frmMain.MDIChildCount-1 do
+if frmMain.MDIChildren[n].Name='frmCharge' then
+frmMain.MDIChildren[n].Close;
+frmCharge.bringtofront;
+frmSalair:=TfrmSalair.Create(frmMain);
+frmSalair.BringToFront;
+//frmCharge.hide;
+end;
+
+procedure TfrmMain.dxNavBar1Item7Click(Sender: TObject);
+begin
+ // frmCharge.Visible:=true;
+for m := 0 to frmMain.MDIChildCount-1 do
+if frmMain.MDIChildren[m].Name='frmCharge' then
+frmMain.MDIChildren[m].Close;
+frmCharge.bringtofront;
+frmPrime:=TfrmPrime.Create(frmMain);
+frmPrime.BringToFront;
+//frmCharge.hide;
+end;
+
+procedure TfrmMain.dxNavBar1Item8Click(Sender: TObject);
+begin
+ // frmCharge.Visible:=true;
+for w := 0 to frmMain.MDIChildCount-1 do
+if frmMain.MDIChildren[w].Name='frmCharge' then
+frmMain.MDIChildren[w].Close;
+frmCharge.bringtofront;
+frmRetenue:=frmRetenue.Create(frmMain);
+frmRetenue.BringToFront;
+//frmCharge.hide;
 end;
 
 procedure TfrmMain.dxSkinChooserGalleryItem1SkinChanged(Sender: TObject;

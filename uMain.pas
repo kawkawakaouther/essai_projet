@@ -25,7 +25,7 @@ uses
   cxEdit, dxSkinsForm, dxStatusBar, dxRibbonStatusBar, cxLabel, dxGallery,
   dxGalleryControl, dxRibbonBackstageViewGalleryControl, dxNavBar, dxBarDBNav,
   dxRibbonGallery, dxSkinChooserGallery, dxLayoutLookAndFeels, dxNavBarCollns,
-  dxNavBarBase, dxNavBarStyles, cxStyles;
+  dxNavBarBase, dxNavBarStyles, cxStyles, Vcl.ExtCtrls, Vcl.StdCtrls;
 
 type
   TfrmMain = class(TdxRibbonForm)
@@ -100,6 +100,8 @@ type
     dxNavBar1Item14: TdxNavBarItem;
     dxNavBar1Item15: TdxNavBarItem;
     dxNavBar1Item2: TdxNavBarItem;
+    Label1: TLabel;
+    Timer1: TTimer;
     procedure dxSkinChooserGalleryItem1SkinChanged(Sender: TObject;
       const ASkinName: string);
     procedure btPriorClick(Sender: TObject);
