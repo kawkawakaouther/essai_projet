@@ -1,0 +1,161 @@
+object cadrEmp: TcadrEmp
+  Left = 0
+  Top = 0
+  Width = 658
+  Height = 341
+  TabOrder = 0
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 0
+    Width = 658
+    Height = 341
+    Align = alClient
+    TabOrder = 0
+    object cxDBLabel3: TcxDBLabel
+      Left = 180
+      Top = -23
+      Style.HotTrack = False
+      Height = 21
+      Width = 417
+    end
+    object cxDBLabel4: TcxDBLabel
+      Left = 151
+      Top = 4
+      Style.HotTrack = False
+      Height = 21
+      Width = 446
+    end
+    object cxDBDateEdit1: TcxDBDateEdit
+      Left = 113
+      Top = 31
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 2
+      Width = 518
+    end
+    object cxDBLabel5: TcxDBLabel
+      Left = 113
+      Top = 58
+      Style.HotTrack = False
+      Height = 21
+      Width = 518
+    end
+    object cxDBLabel6: TcxDBLabel
+      Left = 113
+      Top = 85
+      Style.HotTrack = False
+      Height = 21
+      Width = 518
+    end
+    object cxDBImage1: TcxDBImage
+      Left = 493
+      Top = 175
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 6
+      Height = 136
+      Width = 126
+    end
+    object cxDBLabel7: TcxDBLabel
+      Left = 479
+      Top = 148
+      Style.HotTrack = False
+      Height = 21
+      Width = 140
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      ItemIndex = 5
+      ShowBorder = False
+      Index = -1
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahRight
+      AlignVert = avTop
+      CaptionOptions.Text = #1575#1604#1604#1602#1576
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel3
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 417
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahRight
+      CaptionOptions.Text = #1575#1604#1573#1587#1605
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel4
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 446
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.Text = 'Date de Naissance'
+      Control = cxDBDateEdit1
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.Text = 'Wilaya de Naissance'
+      Control = cxDBLabel5
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 122
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem7: TdxLayoutItem
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.Text = 'Adresse'
+      Control = cxDBLabel6
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 351
+      ControlOptions.ShowBorder = False
+      Index = 4
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahRight
+      CaptionOptions.Text = 'Photo'
+      CaptionOptions.Layout = clBottom
+      Control = cxDBImage1
+      ControlOptions.OriginalHeight = 136
+      ControlOptions.OriginalWidth = 126
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      AlignHorz = ahClient
+      AlignVert = avTop
+      ButtonOptions.Buttons = <>
+      ItemIndex = 1
+      Index = 5
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = dxLayoutGroup1
+      AlignHorz = ahRight
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = 'N'#176' ID Employ'#233
+      CaptionOptions.Layout = clTop
+      Control = cxDBLabel7
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 140
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+  end
+end

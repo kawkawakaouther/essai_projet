@@ -1,0 +1,90 @@
+object frmGrade: TfrmGrade
+  Left = 0
+  Top = 0
+  Caption = #1602#1575#1574#1605#1577' '#1575#1604#1585#1578#1576' '#1575#1604#1573#1583#1575#1585#1610#1577
+  ClientHeight = 437
+  ClientWidth = 746
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxGrid1: TcxGrid
+    Left = 0
+    Top = 0
+    Width = 746
+    Height = 437
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 160
+    ExplicitTop = 88
+    ExplicitWidth = 250
+    ExplicitHeight = 200
+    object cxGrid1DBTableView1: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      DataController.DataSource = Data1.SGrade
+      DataController.DetailKeyFieldNames = 'id_gra'
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      object cxGrid1DBTableView1id_gra: TcxGridDBColumn
+        DataBinding.FieldName = 'id_gra'
+      end
+      object cxGrid1DBTableView1des_fr_gra: TcxGridDBColumn
+        DataBinding.FieldName = 'des_fr_gra'
+      end
+      object cxGrid1DBTableView1id_cor: TcxGridDBColumn
+        DataBinding.FieldName = 'id_cor'
+      end
+      object cxGrid1DBTableView1id_gro: TcxGridDBColumn
+        DataBinding.FieldName = 'id_gro'
+      end
+      object cxGrid1DBTableView1id_cat: TcxGridDBColumn
+        DataBinding.FieldName = 'id_cat'
+      end
+      object cxGrid1DBTableView1id_ech: TcxGridDBColumn
+        DataBinding.FieldName = 'id_ech'
+      end
+    end
+    object cxGrid1DBTableView2: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      DataController.DataSource = Data1.SGrade
+      DataController.DetailKeyFieldNames = 'id_gra'
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      object cxGrid1DBTableView2id_gra: TcxGridDBColumn
+        DataBinding.FieldName = 'id_gra'
+      end
+      object cxGrid1DBTableView2des_ar_gra: TcxGridDBColumn
+        DataBinding.FieldName = 'des_ar_gra'
+      end
+      object cxGrid1DBTableView2id_cor: TcxGridDBColumn
+        DataBinding.FieldName = 'id_cor'
+      end
+      object cxGrid1DBTableView2id_gro: TcxGridDBColumn
+        DataBinding.FieldName = 'id_gro'
+      end
+      object cxGrid1DBTableView2id_cat: TcxGridDBColumn
+        DataBinding.FieldName = 'id_cat'
+      end
+      object cxGrid1DBTableView2id_ech: TcxGridDBColumn
+        DataBinding.FieldName = 'id_ech'
+      end
+    end
+    object cxGrid1Level1: TcxGridLevel
+      GridView = cxGrid1DBTableView1
+    end
+    object cxGrid1Level2: TcxGridLevel
+      GridView = cxGrid1DBTableView2
+    end
+  end
+end

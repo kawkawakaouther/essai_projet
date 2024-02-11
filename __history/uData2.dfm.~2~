@@ -1,0 +1,26 @@
+object Data2: TData2
+  OldCreateOrder = False
+  Height = 266
+  Width = 415
+  object Style1: TcxStyleRepository
+    Left = 48
+    Top = 24
+    PixelsPerInch = 96
+    object Header: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Gadugi'
+      Font.Style = [fsBold]
+    end
+    object Content: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Calibri'
+      Font.Style = [fsItalic]
+    end
+  end
+end

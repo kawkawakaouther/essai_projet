@@ -1,0 +1,257 @@
+object cadrEmp: TcadrEmp
+  Left = 0
+  Top = 0
+  Width = 832
+  Height = 208
+  TabOrder = 0
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 0
+    Width = 832
+    Height = 208
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 658
+    ExplicitHeight = 341
+    object cxDBLabel3: TcxDBLabel
+      Left = 328
+      Top = 10
+      Touch.ParentTabletOptions = False
+      Touch.TabletOptions = [toPressAndHold]
+      DataBinding.DataField = 'nom_ar_emp'
+      DataBinding.DataSource = Data1.SEmp
+      ParentFont = False
+      Properties.Alignment.Horz = taCenter
+      Properties.Orientation = cxoBottom
+      Style.BorderStyle = ebsNone
+      Style.Font.Charset = ARABIC_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -15
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.HotTrack = False
+      Style.TextStyle = []
+      Style.TransparentBorder = True
+      Style.IsFontAssigned = True
+      StyleDisabled.BorderStyle = ebsNone
+      StyleDisabled.TextStyle = []
+      StyleHot.BorderStyle = ebsNone
+      StyleHot.TextStyle = []
+      Height = 31
+      Width = 417
+      AnchorX = 537
+    end
+    object cxDBLabel4: TcxDBLabel
+      Left = 328
+      Top = 47
+      DataBinding.DataField = 'pre_ar_emp'
+      DataBinding.DataSource = Data1.SEmp
+      ParentFont = False
+      Properties.Alignment.Horz = taCenter
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -16
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.HotTrack = False
+      Style.IsFontAssigned = True
+      Height = 34
+      Width = 417
+      AnchorX = 537
+    end
+    object cxDBDateEdit1: TcxDBDateEdit
+      Left = 51
+      Top = 87
+      DataBinding.DataField = 'dat_nai_emp'
+      DataBinding.DataSource = Data1.SEmp
+      ParentFont = False
+      Properties.Alignment.Horz = taCenter
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -16
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      Style.IsFontAssigned = True
+      TabOrder = 4
+      Width = 694
+    end
+    object cxDBLabel5: TcxDBLabel
+      Left = 51
+      Top = 120
+      DataBinding.DataField = 'des_ar_wil_adr'
+      DataBinding.DataSource = Data1.SEmp
+      ParentFont = False
+      Properties.Alignment.Horz = taCenter
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -16
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.HotTrack = False
+      Style.IsFontAssigned = True
+      Height = 26
+      Width = 694
+      AnchorX = 398
+    end
+    object cxDBLabel6: TcxDBLabel
+      Left = 51
+      Top = 152
+      DataBinding.DataField = 'adr_ar_emp'
+      DataBinding.DataSource = Data1.SEmp
+      ParentFont = False
+      Properties.Alignment.Horz = taCenter
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -16
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.HotTrack = False
+      Style.IsFontAssigned = True
+      Height = 33
+      Width = 694
+      AnchorX = 398
+    end
+    object cxDBImage1: TcxDBImage
+      Left = -81
+      Top = 10
+      DataBinding.DataField = 'pho_emp'
+      DataBinding.DataSource = Data1.SEmp
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 0
+      Height = 136
+      Width = 126
+    end
+    object cxDBLabel7: TcxDBLabel
+      Left = 51
+      Top = 28
+      DataBinding.DataField = 'mat_emp'
+      DataBinding.DataSource = Data1.SEmp
+      ParentFont = False
+      Properties.Alignment.Horz = taCenter
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -16
+      Style.Font.Name = 'Tahoma'
+      Style.Font.Style = []
+      Style.HotTrack = False
+      Style.IsFontAssigned = True
+      Height = 29
+      Width = 271
+      AnchorX = 187
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      LayoutDirection = ldHorizontal
+      ShowBorder = False
+      Index = -1
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = #1575#1604#1604#1602#1576
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel3
+      ControlOptions.OriginalHeight = 31
+      ControlOptions.OriginalWidth = 417
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahClient
+      CaptionOptions.Text = #1575#1604#1573#1587#1605
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel4
+      ControlOptions.OriginalHeight = 34
+      ControlOptions.OriginalWidth = 417
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      CaptionOptions.Text = #1578#1575#1585#1610#1582' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBDateEdit1
+      ControlOptions.OriginalHeight = 27
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      CaptionOptions.Text = #1605#1603#1575#1606' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel5
+      ControlOptions.OriginalHeight = 26
+      ControlOptions.OriginalWidth = 122
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem7: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      CaptionOptions.Text = #1575#1604#1593#1606#1608#1575#1606
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel6
+      ControlOptions.OriginalHeight = 33
+      ControlOptions.OriginalWidth = 351
+      ControlOptions.ShowBorder = False
+      Index = 3
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = #1589#1608#1585#1577' '#1588#1582#1589#1610#1577
+      CaptionOptions.Layout = clBottom
+      Control = cxDBImage1
+      ControlOptions.OriginalHeight = 136
+      ControlOptions.OriginalWidth = 126
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignHorz = ahClient
+      AlignVert = avTop
+      ButtonOptions.Buttons = <>
+      Index = 4
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = 'N'#176'Matr'#233'cule /'#1585#1602#1605' '#1575#1604#1578#1587#1580#1610#1604
+      CaptionOptions.Layout = clTop
+      Control = cxDBLabel7
+      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalWidth = 271
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahRight
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutControl1Group_Root
+      Index = 1
+    end
+  end
+end

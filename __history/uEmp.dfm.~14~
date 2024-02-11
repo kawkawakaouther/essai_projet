@@ -1,0 +1,361 @@
+object frmEmp: TfrmEmp
+  Left = 0
+  Top = 0
+  Caption = #1602#1575#1574#1605#1577' '#1575#1604#1605#1608#1592#1601#1610#1606
+  ClientHeight = 457
+  ClientWidth = 770
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxGrid1: TcxGrid
+    Left = 0
+    Top = 0
+    Width = 770
+    Height = 457
+    Align = alClient
+    TabOrder = 0
+    object cxGrid1DBTableView1: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      Navigator.Buttons.First.Visible = True
+      Navigator.Buttons.PriorPage.Visible = True
+      Navigator.Buttons.Prior.Visible = True
+      Navigator.Buttons.Next.Visible = True
+      Navigator.Buttons.NextPage.Visible = True
+      Navigator.Buttons.Last.Visible = True
+      Navigator.Buttons.Insert.Visible = True
+      Navigator.Buttons.Append.Visible = False
+      Navigator.Buttons.Delete.Visible = True
+      Navigator.Buttons.Edit.Visible = True
+      Navigator.Buttons.Post.Visible = True
+      Navigator.Buttons.Cancel.Visible = True
+      Navigator.Buttons.Refresh.Visible = True
+      Navigator.Buttons.SaveBookmark.Visible = True
+      Navigator.Buttons.GotoBookmark.Visible = True
+      Navigator.Buttons.Filter.Visible = True
+      DataController.DataSource = Data1.SEmp
+      DataController.DetailKeyFieldNames = 'None selected'
+      DataController.KeyFieldNames = 'None selected'
+      DataController.MultiThreadedOptions.Filtering = bFalse
+      DataController.MultiThreadedOptions.Sorting = bFalse
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      FilterRow.InfoText = 'Recherche Rapide'
+      FilterRow.Visible = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
+      OptionsView.GroupByBox = False
+      OptionsView.Indicator = True
+      Styles.Content = Data2.Content
+      Styles.Header = Data2.Header
+      object cxGrid1DBTableView1id_emp1: TcxGridDBColumn
+        DataBinding.FieldName = 'id_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        Visible = False
+        HeaderAlignmentHorz = taCenter
+        VisibleForEditForm = bFalse
+        Width = 84
+      end
+      object cxGrid1DBTableView1mat_emp1: TcxGridDBColumn
+        Caption = 'Matr'#233'cule'
+        DataBinding.FieldName = 'mat_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 98
+      end
+      object cxGrid1DBTableView1nom_fr_emp1: TcxGridDBColumn
+        Caption = 'Nom'
+        DataBinding.FieldName = 'nom_fr_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 116
+      end
+      object cxGrid1DBTableView1pre_fr_emp1: TcxGridDBColumn
+        Caption = 'Pr'#233'nom'
+        DataBinding.FieldName = 'pre_fr_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 95
+      end
+      object cxGrid1DBTableView1des_fr_wil_nai: TcxGridDBColumn
+        Caption = 'Wilaya de Naissance'
+        DataBinding.FieldName = 'des_fr_wil_nai'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        FooterAlignmentHorz = taCenter
+        GroupSummaryAlignment = taCenter
+        HeaderAlignmentHorz = taCenter
+        Width = 126
+      end
+      object cxGrid1DBTableView1dat_nai_emp1: TcxGridDBColumn
+        Caption = 'Date de Naissance'
+        DataBinding.FieldName = 'dat_nai_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 84
+      end
+      object cxGrid1DBTableView1pre_fr_per_emp1: TcxGridDBColumn
+        Caption = 'Pr'#233'nom P'#232're'
+        DataBinding.FieldName = 'pre_fr_per_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 82
+      end
+      object cxGrid1DBTableView1nom_fr_mer_emp1: TcxGridDBColumn
+        Caption = 'Nom M'#232're'
+        DataBinding.FieldName = 'nom_fr_mer_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 93
+      end
+      object cxGrid1DBTableView1pre_fr_mer_emp1: TcxGridDBColumn
+        Caption = 'Pr'#233'nom M'#232're'
+        DataBinding.FieldName = 'pre_fr_mer_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 95
+      end
+      object cxGrid1DBTableView1adr_fr_emp1: TcxGridDBColumn
+        Caption = 'Adresse'
+        DataBinding.FieldName = 'adr_fr_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 277
+      end
+      object cxGrid1DBTableView1des_fr_wil_adr: TcxGridDBColumn
+        Caption = 'Wilaya'
+        DataBinding.FieldName = 'des_fr_wil_adr'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 93
+      end
+      object cxGrid1DBTableView1des_fr_dai1: TcxGridDBColumn
+        Caption = 'Daira'
+        DataBinding.FieldName = 'des_fr_dai'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 95
+      end
+      object cxGrid1DBTableView1des_fr_com1: TcxGridDBColumn
+        Caption = 'Commune'
+        DataBinding.FieldName = 'des_fr_com'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 79
+      end
+      object cxGrid1DBTableView1des_fr_sex1: TcxGridDBColumn
+        Caption = 'Sexe'
+        DataBinding.FieldName = 'des_fr_sex'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 64
+      end
+      object cxGrid1DBTableView1nss_emp1: TcxGridDBColumn
+        Caption = 'N'#176' Assurence Sociale'
+        DataBinding.FieldName = 'nss_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 99
+      end
+      object cxGrid1DBTableView1pho_emp1: TcxGridDBColumn
+        Caption = 'Photo '
+        DataBinding.FieldName = 'pho_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taLeftJustify
+        HeaderAlignmentHorz = taCenter
+        Width = 84
+      end
+    end
+    object cxGrid1DBTableView2: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      DataController.DataSource = Data1.SEmp
+      DataController.DetailKeyFieldNames = 'id_emp'
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      FilterRow.InfoText = #1576#1581#1579' '#1587#1585#1610#1593
+      FilterRow.Visible = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
+      OptionsView.GroupByBox = False
+      OptionsView.Indicator = True
+      Styles.Content = Data2.Content
+      Styles.Header = Data2.Header
+      object cxGrid1DBTableView2id_emp: TcxGridDBColumn
+        DataBinding.FieldName = 'id_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        Visible = False
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+      end
+      object cxGrid1DBTableView2mat_emp: TcxGridDBColumn
+        Caption = #1585#1602#1605' '#1575#1604#1578#1587#1580#1610#1604
+        DataBinding.FieldName = 'mat_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 80
+      end
+      object cxGrid1DBTableView2nom_ar_emp: TcxGridDBColumn
+        Caption = #1575#1604#1604#1602#1576
+        DataBinding.FieldName = 'nom_ar_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 93
+      end
+      object cxGrid1DBTableView2pre_ar_emp: TcxGridDBColumn
+        Caption = #1575#1604#1573#1587#1605
+        DataBinding.FieldName = 'pre_ar_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 76
+      end
+      object cxGrid1DBTableView2id_nai_wil: TcxGridDBColumn
+        Caption = #1608#1604#1575#1610#1577' '#1575#1604#1573#1586#1583#1610#1575#1583
+        DataBinding.FieldName = 'des_ar_wil_nai'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 123
+      end
+      object cxGrid1DBTableView2dat_nai_emp: TcxGridDBColumn
+        Caption = #1578#1575#1585#1610#1582' '#1575#1604#1605#1610#1604#1575#1583
+        DataBinding.FieldName = 'dat_nai_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+      end
+      object cxGrid1DBTableView2pre_ar_per_emp: TcxGridDBColumn
+        Caption = #1573#1587#1605' '#1575#1604#1571#1576
+        DataBinding.FieldName = 'pre_ar_per_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 79
+      end
+      object cxGrid1DBTableView2nom_ar_mer_emp: TcxGridDBColumn
+        Caption = #1604#1602#1576' '#1575#1604#1571#1605
+        DataBinding.FieldName = 'nom_ar_mer_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 88
+      end
+      object cxGrid1DBTableView2pre_ar_mer_emp: TcxGridDBColumn
+        Caption = #1573#1587#1605' '#1575#1604#1571#1605
+        DataBinding.FieldName = 'pre_ar_mer_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 69
+      end
+      object cxGrid1DBTableView2adr_ar_emp: TcxGridDBColumn
+        Caption = #1575#1604#1593#1606#1608#1575#1606
+        DataBinding.FieldName = 'adr_ar_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 263
+      end
+      object cxGrid1DBTableView2des_ar_wil: TcxGridDBColumn
+        Caption = #1575#1604#1608#1604#1575#1610#1577
+        DataBinding.FieldName = 'des_ar_wil_adr'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 63
+      end
+      object cxGrid1DBTableView2des_ar_dai: TcxGridDBColumn
+        Caption = #1575#1604#1583#1575#1574#1585#1577
+        DataBinding.FieldName = 'des_ar_dai'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 93
+      end
+      object cxGrid1DBTableView2des_ar_com: TcxGridDBColumn
+        Caption = #1575#1604#1576#1604#1583#1610#1577
+        DataBinding.FieldName = 'des_ar_com'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+        Width = 97
+      end
+      object cxGrid1DBTableView2des_ar_sex: TcxGridDBColumn
+        Caption = #1575#1604#1580#1606#1587
+        DataBinding.FieldName = 'des_ar_sex'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+      end
+      object cxGrid1DBTableView2nss_emp: TcxGridDBColumn
+        Caption = #1585#1602#1605' '#1575#1604#1590#1605#1575#1606' '#1575#1604#1573#1580#1578#1605#1575#1593#1610
+        DataBinding.FieldName = 'nss_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+      end
+      object cxGrid1DBTableView2pho_emp: TcxGridDBColumn
+        Caption = #1589#1608#1585#1577
+        DataBinding.FieldName = 'pho_emp'
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.Alignment.Horz = taRightJustify
+        HeaderAlignmentHorz = taCenter
+        Options.Editing = False
+      end
+    end
+    object cxGrid1Level1: TcxGridLevel
+      GridView = cxGrid1DBTableView1
+    end
+    object cxGrid1Level2: TcxGridLevel
+      GridView = cxGrid1DBTableView2
+    end
+  end
+end

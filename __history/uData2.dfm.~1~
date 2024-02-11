@@ -1,0 +1,10 @@
+object Data2: TData2
+  OldCreateOrder = False
+  Height = 266
+  Width = 415
+  object cxStyleRepository1: TcxStyleRepository
+    Left = 40
+    Top = 24
+    PixelsPerInch = 96
+  end
+end

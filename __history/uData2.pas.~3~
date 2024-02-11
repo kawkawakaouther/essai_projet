@@ -1,0 +1,30 @@
+unit uData2;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, cxClasses, cxStyles;
+
+type
+  TData2 = class(TDataModule)
+    Style1: TcxStyleRepository;
+    Header: TcxStyle;
+    Content: TcxStyle;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Data2: TData2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses uData, uEdEmp, uEmp, uFamille, uLogin, uMain;
+
+{$R *.dfm}
+
+end.

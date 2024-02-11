@@ -1,0 +1,594 @@
+object frmEdFamille: TfrmEdFamille
+  Left = 0
+  Top = 0
+  Caption = #1573#1583#1582#1575#1604' '#1575#1604#1576#1610#1575#1606#1575#1578' '#1575#1604#1593#1575#1574#1604#1610#1577
+  ClientHeight = 584
+  ClientWidth = 837
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 224
+    Width = 837
+    Height = 360
+    Align = alBottom
+    TabOrder = 0
+    HighlightRoot = False
+    ExplicitWidth = 759
+    object cxDBTextEdit1: TcxDBTextEdit
+      Left = 169
+      Top = 44
+      DataBinding.DataField = 'nom_fr_con'
+      DataBinding.DataSource = Data1.SConjoint
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 0
+      Width = 234
+    end
+    object cxDBTextEdit2: TcxDBTextEdit
+      Left = 169
+      Top = 71
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 2
+      Width = 234
+    end
+    object cxDBTextEdit3: TcxDBTextEdit
+      Left = 409
+      Top = 44
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 1
+      Height = 21
+      Width = 232
+    end
+    object cxDBTextEdit4: TcxDBTextEdit
+      Left = 409
+      Top = 71
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 3
+      Height = 21
+      Width = 232
+    end
+    object cxDBDateEdit1: TcxDBDateEdit
+      Left = 24
+      Top = 98
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 4
+      Height = 21
+      Width = 323
+    end
+    object cxDBLookupComboBox1: TcxDBLookupComboBox
+      Left = 412
+      Top = 98
+      AutoSize = False
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 5
+      Height = 21
+      Width = 230
+    end
+    object cxDBLookupComboBox2: TcxDBLookupComboBox
+      Left = 169
+      Top = 152
+      AutoSize = False
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 8
+      Height = 21
+      Width = 91
+    end
+    object cxDBLookupComboBox3: TcxDBLookupComboBox
+      Left = 452
+      Top = 152
+      AutoSize = False
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 10
+      Height = 21
+      Width = 193
+    end
+    object cxDBTextEdit5: TcxDBTextEdit
+      Left = 266
+      Top = 152
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 9
+      Height = 21
+      Width = 121
+    end
+    object cxDBTextEdit6: TcxDBTextEdit
+      Left = 169
+      Top = 125
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 6
+      Height = 21
+      Width = 121
+    end
+    object cxDBDateEdit2: TcxDBDateEdit
+      Left = 463
+      Top = 125
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 7
+      Height = 21
+      Width = 182
+    end
+    object cxDBTextEdit7: TcxDBTextEdit
+      Left = 10000
+      Top = 10000
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 12
+      Visible = False
+      Width = 121
+    end
+    object cxDBTextEdit8: TcxDBTextEdit
+      Left = 10000
+      Top = 10000
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 14
+      Visible = False
+      Width = 121
+    end
+    object cxDBTextEdit9: TcxDBTextEdit
+      Left = 10000
+      Top = 10000
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 13
+      Visible = False
+      Height = 21
+      Width = 121
+    end
+    object cxDBTextEdit10: TcxDBTextEdit
+      Left = 10000
+      Top = 10000
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 15
+      Visible = False
+      Height = 21
+      Width = 121
+    end
+    object cxDBDateEdit3: TcxDBDateEdit
+      Left = 10000
+      Top = 10000
+      AutoSize = False
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 16
+      Visible = False
+      Height = 21
+      Width = 121
+    end
+    object cxDBLookupComboBox4: TcxDBLookupComboBox
+      Left = 10000
+      Top = 10000
+      AutoSize = False
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 17
+      Visible = False
+      Height = 21
+      Width = 145
+    end
+    object cxDBTextEdit11: TcxDBTextEdit
+      Left = 10000
+      Top = 10000
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      TabOrder = 19
+      Visible = False
+      Width = 121
+    end
+    object cxDBLookupComboBox5: TcxDBLookupComboBox
+      Left = 10000
+      Top = 10000
+      AutoSize = False
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 18
+      Visible = False
+      Height = 21
+      Width = 91
+    end
+    object cxDBLookupComboBox6: TcxDBLookupComboBox
+      Left = 10000
+      Top = 10000
+      Properties.ListColumns = <>
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
+      Style.HotTrack = False
+      Style.ButtonStyle = bts3D
+      Style.PopupBorderStyle = epbsFrame3D
+      TabOrder = 11
+      Visible = False
+      Width = 91
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.AlignHorz = taRightJustify
+      CaptionOptions.AlignVert = tavCenter
+      CaptionOptions.Layout = clRight
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      LayoutDirection = ldTabbed
+      ShowBorder = False
+      Index = -1
+    end
+    object dxLayoutGroup1: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.AlignHorz = taRightJustify
+      CaptionOptions.AlignVert = tavCenter
+      CaptionOptions.Layout = clRight
+      CaptionOptions.Text = #1605#1593#1604#1608#1605#1575#1578' '#1575#1604#1586#1608#1580' ('#1577')'
+      ButtonOptions.Buttons = <>
+      ItemIndex = 3
+      TabbedOptions.TabCaptionAlignment = taRightJustify
+      Index = 0
+    end
+    object dxLayoutGroup2: TdxLayoutGroup
+      Parent = dxLayoutControl1Group_Root
+      CaptionOptions.AlignHorz = taCenter
+      CaptionOptions.Text = #1605#1593#1604#1608#1605#1575#1578' '#1575#1604#1571#1576#1606#1575#1569
+      ButtonOptions.Buttons = <>
+      ItemIndex = 4
+      Index = 1
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      CaptionOptions.Text = 'Nom '
+      Control = cxDBTextEdit1
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 234
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem2: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      CaptionOptions.Text = 'Pr'#233'nom'
+      Control = cxDBTextEdit2
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 234
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignVert = avClient
+      CaptionOptions.Text = #1575#1604#1604#1602#1576
+      CaptionOptions.Layout = clRight
+      Control = cxDBTextEdit3
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 232
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignVert = avClient
+      CaptionOptions.Text = #1575#1604#1573#1587#1605
+      CaptionOptions.Layout = clRight
+      Control = cxDBTextEdit4
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 232
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem5: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignVert = avClient
+      CaptionOptions.Text = #1578#1575#1585#1610#1582' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBDateEdit1
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 323
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem6: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup3
+      AlignVert = avClient
+      CaptionOptions.Text = #1605#1603#1575#1606' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBLookupComboBox1
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 230
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup1
+      LayoutDirection = ldHorizontal
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup1
+      LayoutDirection = ldHorizontal
+      Index = 1
+    end
+    object dxLayoutItem7: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignVert = avClient
+      CaptionOptions.Text = 'Sexe/'#1575#1604#1580#1606#1587
+      Control = cxDBLookupComboBox2
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 91
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem8: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignVert = avClient
+      CaptionOptions.Text = #1575#1604#1605#1607#1606#1577
+      CaptionOptions.Layout = clRight
+      Control = cxDBLookupComboBox3
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 193
+      ControlOptions.ShowBorder = False
+      Index = 2
+    end
+    object dxLayoutItem9: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup7
+      AlignVert = avClient
+      CaptionOptions.Text = #1593#1583#1583' '#1575#1604#1571#1591#1601#1575#1604
+      CaptionOptions.Layout = clRight
+      Control = cxDBTextEdit5
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem10: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup5
+      AlignVert = avClient
+      CaptionOptions.Text = 'N'#176' A.Marriage/'#1585#1602#1605' '#1593#1602#1583' '#1575#1604#1586#1608#1575#1580
+      Control = cxDBTextEdit6
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem11: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup5
+      AlignVert = avClient
+      CaptionOptions.Text = 'Date A.Marriage/ '#1578#1575#1585#1610#1582' '#1593#1602#1583' '#1575#1604#1605#1610#1604#1575#1583
+      Control = cxDBDateEdit2
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 182
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup6: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup1
+      AlignHorz = ahLeft
+      AlignVert = avTop
+      Index = 3
+    end
+    object dxLayoutAutoCreatedGroup5: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutAutoCreatedGroup6
+      LayoutDirection = ldHorizontal
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup1
+      AlignVert = avTop
+      LayoutDirection = ldHorizontal
+      Index = 2
+    end
+    object dxLayoutAutoCreatedGroup7: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutAutoCreatedGroup6
+      LayoutDirection = ldHorizontal
+      Index = 1
+    end
+    object dxLayoutItem12: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup4
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Nom Enfant'
+      Control = cxDBTextEdit7
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem13: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Pr'#233'nom Enfant'
+      Control = cxDBTextEdit8
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem14: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup4
+      AlignVert = avClient
+      CaptionOptions.Text = #1604#1602#1576' '#1575#1604#1591#1601#1604
+      CaptionOptions.Layout = clRight
+      Control = cxDBTextEdit9
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem15: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup8
+      AlignVert = avClient
+      CaptionOptions.Text = #1573#1587#1605' '#1575#1604#1591#1601#1604
+      CaptionOptions.Layout = clRight
+      Control = cxDBTextEdit10
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem16: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup9
+      AlignVert = avClient
+      CaptionOptions.Text = #1578#1575#1585#1610#1582' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBDateEdit3
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem17: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup9
+      AlignVert = avClient
+      CaptionOptions.Text = #1605#1603#1575#1606' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBLookupComboBox4
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 145
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem18: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup10
+      CaptionOptions.Text = #1585#1602#1605' '#1588#1607#1575#1583#1577' '#1575#1604#1605#1610#1604#1575#1583
+      CaptionOptions.Layout = clRight
+      Control = cxDBTextEdit11
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 121
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem19: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup10
+      AlignVert = avClient
+      CaptionOptions.Text = 'Sexe/ '#1575#1604#1580#1606#1587
+      Control = cxDBLookupComboBox5
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 91
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem20: TdxLayoutItem
+      Parent = dxLayoutGroup2
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'N'#176' Enfant/'#1585#1602#1605' '#1575#1604#1591#1601#1604
+      Control = cxDBLookupComboBox6
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 91
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup4: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup2
+      LayoutDirection = ldHorizontal
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup8: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup2
+      LayoutDirection = ldHorizontal
+      Index = 2
+    end
+    object dxLayoutAutoCreatedGroup9: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup2
+      LayoutDirection = ldHorizontal
+      Index = 3
+    end
+    object dxLayoutAutoCreatedGroup10: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutGroup2
+      LayoutDirection = ldHorizontal
+      Index = 4
+    end
+  end
+  inline cadrEmp1: TcadrEmp
+    Left = 0
+    Top = 0
+    Width = 837
+    Height = 231
+    Align = alTop
+    TabOrder = 1
+    ExplicitLeft = -82
+    inherited dxLayoutControl1: TdxLayoutControl
+      Width = 837
+      inherited cxDBLabel3: TcxDBLabel
+        AnchorX = 844
+        AnchorY = 30
+      end
+      inherited cxDBLabel4: TcxDBLabel
+        AnchorX = 844
+        AnchorY = 70
+      end
+      inherited cxDBLabel5: TcxDBLabel
+        AnchorX = 844
+        AnchorY = 143
+      end
+      inherited cxDBLabel6: TcxDBLabel
+        AnchorX = 844
+        AnchorY = 181
+      end
+      inherited cxDBLabel7: TcxDBLabel
+        AnchorX = 284
+      end
+    end
+  end
+end

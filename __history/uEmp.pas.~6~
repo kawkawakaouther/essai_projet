@@ -1,0 +1,88 @@
+unit uEmp;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxStyles, dxSkinsCore, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkinLilian, dxSkinLiquidSky,
+  dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
+  dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinOffice2019Colorful,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
+  dxSkinValentine, dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit,
+  cxNavigator, dxDateRanges, Data.DB, cxDBData, cxGridLevel, cxClasses,
+  cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
+  cxGrid, cxDBLookupComboBox;
+
+type
+  TfrmEmp = class(TForm)
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    cxGrid1: TcxGrid;
+    cxGrid1Level2: TcxGridLevel;
+    cxGrid1DBTableView2: TcxGridDBTableView;
+    cxGrid1DBTableView1id_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1nom_fr_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1pre_fr_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1id_nai_wil: TcxGridDBColumn;
+    cxGrid1DBTableView1dat_nai_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1pre_fr_per_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1nom_fr_mer_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1pre_fr_mer_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1adr_fr_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1mat_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1nss_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1pho_emp: TcxGridDBColumn;
+    cxGrid1DBTableView1des_fr_wil: TcxGridDBColumn;
+    cxGrid1DBTableView1des_fr_dai: TcxGridDBColumn;
+    cxGrid1DBTableView1des_fr_com: TcxGridDBColumn;
+    cxGrid1DBTableView1des_fr_sex: TcxGridDBColumn;
+    cxGrid1DBTableView2id_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2nom_ar_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2pre_ar_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2id_nai_wil: TcxGridDBColumn;
+    cxGrid1DBTableView2dat_nai_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2pre_ar_per_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2nom_ar_mer_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2pre_ar_mer_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2adr_ar_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2mat_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2nss_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2pho_emp: TcxGridDBColumn;
+    cxGrid1DBTableView2des_ar_wil: TcxGridDBColumn;
+    cxGrid1DBTableView2des_ar_dai: TcxGridDBColumn;
+    cxGrid1DBTableView2des_ar_com: TcxGridDBColumn;
+    cxGrid1DBTableView2des_ar_sex: TcxGridDBColumn;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  frmEmp: TfrmEmp;
+
+implementation
+
+{$R *.dfm}
+
+uses uMain, uData, uData2, uEdEmp, uFamille;
+
+procedure TfrmEmp.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action:= caFree;
+end;
+
+end.

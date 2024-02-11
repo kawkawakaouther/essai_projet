@@ -1,0 +1,28 @@
+object Data2: TData2
+  OldCreateOrder = False
+  Height = 266
+  Width = 415
+  object Style1: TcxStyleRepository
+    Left = 48
+    Top = 24
+    PixelsPerInch = 96
+    object Header: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = ARABIC_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+    end
+    object Content: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = ARABIC_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = []
+    end
+    object Ribbon: TcxStyle
+    end
+  end
+end

@@ -1,0 +1,7 @@
+object cadrEmp: TcadrEmp
+  Left = 0
+  Top = 0
+  Width = 768
+  Height = 427
+  TabOrder = 0
+end

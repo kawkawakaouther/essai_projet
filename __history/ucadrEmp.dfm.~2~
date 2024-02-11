@@ -1,0 +1,110 @@
+object cadrEmp: TcadrEmp
+  Left = 0
+  Top = 0
+  Width = 767
+  Height = 332
+  TabOrder = 0
+  object dxLayoutControl1: TdxLayoutControl
+    Left = 0
+    Top = 0
+    Width = 767
+    Height = 332
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 128
+    ExplicitTop = 56
+    ExplicitWidth = 300
+    ExplicitHeight = 250
+    object cxDBLabel1: TcxDBLabel
+      Left = 51
+      Top = 10
+      Style.HotTrack = False
+      Height = 21
+      Width = 174
+    end
+    object cxDBLabel2: TcxDBLabel
+      Left = 51
+      Top = 37
+      Style.HotTrack = False
+      Height = 21
+      Width = 174
+    end
+    object cxDBLabel3: TcxDBLabel
+      Left = 282
+      Top = 10
+      Style.HotTrack = False
+      Height = 21
+      Width = 172
+    end
+    object cxDBLabel4: TcxDBLabel
+      Left = 281
+      Top = 37
+      Style.HotTrack = False
+      Height = 21
+      Width = 171
+    end
+    object dxLayoutControl1Group_Root: TdxLayoutGroup
+      AlignHorz = ahClient
+      AlignVert = avClient
+      ButtonOptions.Buttons = <>
+      Hidden = True
+      ItemIndex = 1
+      ShowBorder = False
+      Index = -1
+    end
+    object dxLayoutItem1: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Nom'
+      Control = cxDBLabel1
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 174
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem2: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahLeft
+      CaptionOptions.Text = 'Pr'#233'nom'
+      Control = cxDBLabel2
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 174
+      ControlOptions.ShowBorder = False
+      Index = 0
+    end
+    object dxLayoutItem3: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup1
+      AlignHorz = ahCenter
+      AlignVert = avClient
+      CaptionOptions.Text = #1575#1604#1604#1602#1576
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel3
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 172
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutItem4: TdxLayoutItem
+      Parent = dxLayoutAutoCreatedGroup2
+      AlignHorz = ahCenter
+      AlignVert = avClient
+      CaptionOptions.Text = #1575#1604#1573#1587#1605
+      CaptionOptions.Layout = clRight
+      Control = cxDBLabel4
+      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalWidth = 171
+      ControlOptions.ShowBorder = False
+      Index = 1
+    end
+    object dxLayoutAutoCreatedGroup1: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutControl1Group_Root
+      LayoutDirection = ldHorizontal
+      Index = 0
+    end
+    object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
+      Parent = dxLayoutControl1Group_Root
+      LayoutDirection = ldHorizontal
+      Index = 1
+    end
+  end
+end

@@ -1,0 +1,19 @@
+object frmGrade: TfrmGrade
+  Left = 0
+  Top = 0
+  Caption = #1602#1575#1574#1605#1577' '#1575#1604#1585#1578#1576' '#1575#1604#1573#1583#1575#1585#1610#1577
+  ClientHeight = 390
+  ClientWidth = 705
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+end

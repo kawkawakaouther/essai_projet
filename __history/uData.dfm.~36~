@@ -1,0 +1,463 @@
+﻿object Data1: TData1
+  OldCreateOrder = False
+  Height = 252
+  Width = 671
+  object UniConnection1: TUniConnection
+    ProviderName = 'postgreSQL'
+    Port = 5432
+    Database = 'dev_team_paie'
+    SpecificOptions.Strings = (
+      'postgreSQL.UseUnicode=True')
+    Username = 'postgres'
+    Server = 'localhost'
+    Connected = True
+    Left = 40
+    Top = 8
+    EncryptedPassword = '8FFF9EFF8CFF8CFF88FF90FF8DFF9BFF'
+  end
+  object PostgreSQLUniProvider1: TPostgreSQLUniProvider
+    Left = 40
+    Top = 56
+  end
+  object QEmp: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      
+        'SELECT id_emp, nom_fr_emp, pre_fr_emp, nom_ar_emp, pre_ar_emp, i' +
+        'd_nai_wil_emp, '
+      
+        '       dat_nai_emp, pre_fr_per_emp, pre_ar_per_emp, nom_fr_mer_e' +
+        'mp, '
+      
+        '       nom_ar_mer_emp, pre_fr_mer_emp, pre_ar_mer_emp, id_sex_em' +
+        'p, id_wil_adr_emp, '
+      
+        '       id_dai_adr_emp, id_com_adr_emp, adr_fr_emp, adr_ar_emp, m' +
+        'at_emp, '
+      '       nss_emp, pho_emp,'
+      '       -----'
+      '       des_fr_sex, des_ar_sex,'
+      '       ----'
+      '       des_fr_wil_nai, des_ar_wil_nai,'
+      '       -----'
+      '       des_fr_wil_adr, des_ar_wil_adr,'
+      '       -----'
+      '       des_fr_dai, des_ar_dai, '
+      '       -----'
+      '       des_fr_com, des_ar_com'
+      '       '
+      '  FROM paie.employes'
+      ''
+      '   left join( SELECT id_sexe, des_fr_sex, des_ar_sex'
+      '  FROM paie.sexe) as ss on ss.id_sexe=employes.id_sex_emp'
+      ''
+      
+        'left join (SELECT id_wil as id_wil_nai, des_fr_wil as des_fr_wil' +
+        '_nai, des_ar_wil as des_ar_wil_nai, num_wil'
+      
+        '  FROM public.wilaya) as ww on ww.id_wil_nai=employes.id_nai_wil' +
+        '_emp'
+      ''
+      '  '
+      
+        '  left join (SELECT id_wil as id_wil_adr, des_fr_wil as des_fr_w' +
+        'il_adr, des_ar_wil as des_ar_wil_adr, num_wil'
+      
+        '  FROM public.wilaya) as dd on dd.id_wil_adr=employes.id_wil_adr' +
+        '_emp'
+      ''
+      '   left join (SELECT id_dair, des_fr_dai, des_ar_dai, id_wil'
+      '  FROM public.daira) as rr on rr.id_dair=employes.id_dai_adr_emp'
+      ''
+      ''
+      '  left join (SELECT id_comu, des_fr_com, des_ar_com, id_dai'
+      
+        '  FROM public.commune) as cc on cc.id_comu=employes.id_com_adr_e' +
+        'mp')
+    Active = True
+    Left = 160
+    Top = 8
+  end
+  object SEmp: TUniDataSource
+    DataSet = QEmp
+    Left = 160
+    Top = 56
+  end
+  object QWilaya: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from public.wilaya ')
+    Active = True
+    Left = 232
+    Top = 8
+  end
+  object QDaira: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from public.daira')
+    MasterSource = SWilaya
+    MasterFields = 'id_wil'
+    DetailFields = 'id_wil'
+    Active = True
+    Left = 304
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'id_wil'
+        ParamType = ptInput
+        Value = 13
+      end>
+  end
+  object QCommune: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from public.commune')
+    MasterSource = SDaira
+    MasterFields = 'id_dair'
+    DetailFields = 'id_dai'
+    Active = True
+    Left = 376
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'id_dair'
+        ParamType = ptInput
+        Value = 156
+      end>
+  end
+  object SWilaya: TUniDataSource
+    DataSet = QWilaya
+    Left = 232
+    Top = 56
+  end
+  object SDaira: TUniDataSource
+    DataSet = QDaira
+    Left = 304
+    Top = 56
+  end
+  object SCommune: TUniDataSource
+    DataSet = QCommune
+    Left = 376
+    Top = 56
+  end
+  object QConjoint: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      
+        'SELECT id_con, nom_fr_con, nom_ar_con, pre_fr_con, pre_ar_con, i' +
+        'd_sex_conj, '
+      
+        '       num_act_mar, dat_act_mar, dat_nai_conj, id_wil_nai_conj, ' +
+        'trav_conj, '
+      '       id_emp, nrb_enf,'
+      '       ---'
+      '       typ_fon_fr, typ_fon_ar,'
+      '       ---'
+      '       des_fr_wil, des_ar_wil,'
+      '       ---'
+      '       des_fr_sex, des_ar_sex'
+      '       ---'
+      '       '
+      '  FROM paie.conjoint'
+      ''
+      ' left join (SELECT typ_fon_fr, id_fon, typ_fon_ar'
+      '  FROM paie.fonct_cnj) ff on ff.id_fon=conjoint.trav_conj'
+      ''
+      ' left join (SELECT id_wil, des_fr_wil, des_ar_wil, num_wil'
+      '  FROM public.wilaya) rs on rs.id_wil=conjoint.id_wil_nai_conj'
+      '  '
+      'left join (SELECT id_sexe, des_fr_sex, des_ar_sex'
+      '  FROM paie.sexe) sz on sz.id_sexe=conjoint.id_sex_conj'
+      ''
+      '  ')
+    MasterSource = SEmp
+    MasterFields = 'id_emp'
+    DetailFields = 'id_emp'
+    Active = True
+    Left = 440
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'id_emp'
+        ParamType = ptInput
+        Value = 2
+      end>
+  end
+  object SConjoint: TUniDataSource
+    DataSet = QConjoint
+    Left = 440
+    Top = 56
+  end
+  object QEnfantListe: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      
+        'SELECT id_enf, nom_fr_enf, nom_ar_enf, pre_fr_enf, pre_ar_enf, i' +
+        'd_sex_enf, '
+      '       dat_nai_enf, id_wil_nai_enf, num_act_nai_enf, id_cnj,'
+      '       ----'
+      '       des_fr_sex, des_ar_sex,'
+      '       ----'
+      '       des_fr_wil, des_ar_wil'
+      ''
+      '  FROM paie.enfants'
+      ' '
+      ''
+      ''
+      '  left join (SELECT id_sexe, des_fr_sex, des_ar_sex'
+      '  FROM paie.sexe) sw on sw.id_sexe=enfants.id_sex_enf'
+      ''
+      ''
+      ''
+      ' left join (SELECT id_wil, des_fr_wil, des_ar_wil, num_wil'
+      '  FROM public.wilaya) dz on dz.id_wil=enfants.id_wil_nai_enf')
+    Active = True
+    Left = 504
+    Top = 8
+  end
+  object SEnfantListe: TUniDataSource
+    DataSet = QEnfantListe
+    Left = 504
+    Top = 56
+  end
+  object QRectement: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'SELECT id_rec, dat_rec, dat_res, id_emp_rec, '
+      
+        '       id_cat_rect, id_ech_rect,id_cor_rec,id_grad_rec,post_emp ' +
+        ','
+      '       ---'
+      '       min_cat,'
+      '       ---'
+      '       val_ech,'
+      '       ---'
+      '       des_ar_cor, des_fr_cor,'
+      '       ---'
+      '       des_ar_gra, des_fr_gra,'
+      '       ---'
+      '       des_fr_post, des_ar_post'
+      '     '
+      ' FROM paie.recrutements'
+      ''
+      
+        'left join  (SELECT id_cat, des_fr_cat, des_ar_cat, min_cat, id_g' +
+        'ro'
+      
+        '  FROM paie.indice_categorie) as cc on cc.id_cat=recrutements.id' +
+        '_cat_rect'
+      ''
+      'left join (SELECT id_ech, val_ech, id_cat, num_ech'
+      
+        '  FROM paie.indice_echelon) as ee on ee.id_ech=recrutements.id_e' +
+        'ch_rect'
+      ''
+      
+        'left join (SELECT id_cor, des_ar_cor, des_fr_cor, num_dec_cor, d' +
+        'at_dec_cor, mat_dec_cor'
+      '  FROM paie.corps) as pp on pp.id_cor=recrutements.id_cor_rec'
+      ''
+      
+        'left join (SELECT id_gra, des_ar_gra, des_fr_gra, id_cor, id_gro' +
+        ', id_cat, id_ech'
+      '  FROM paie.grades) as rg on rg.id_gra=recrutements.id_grad_rec'
+      ''
+      'left join  (SELECT id_st, des_fr_post, des_ar_post, id_emp_sit'
+      
+        '  FROM paie.situation_post) as xd on xd.id_st=recrutements.post_' +
+        'emp '
+      '')
+    MasterSource = SEmp
+    MasterFields = 'id_emp'
+    DetailFields = 'id_emp_rec'
+    Active = True
+    Left = 160
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'id_emp'
+        ParamType = ptInput
+        Value = 2
+      end>
+  end
+  object SRecretem: TUniDataSource
+    DataSet = QRectement
+    Left = 160
+    Top = 160
+  end
+  object QGrade: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      
+        'SELECT id_gra, des_ar_gra, des_fr_gra, id_cor, id_gro, id_cat, i' +
+        'd_ech,'
+      '       ----'
+      '       des_ar_cor, des_fr_cor,'
+      '       ---'
+      '        des_gro_fr, des_gro_ar,'
+      '       ---'
+      '       des_fr_cat, des_ar_cat,'
+      '       ---'
+      '        val_ech,num_ech'
+      ''
+      '  FROM paie.grades'
+      ''
+      ''
+      
+        ' left join (SELECT id_cor as idcor, des_ar_cor, des_fr_cor, num_' +
+        'dec_cor, dat_dec_cor, mat_dec_cor'
+      '  FROM paie.corps) as gr on gr.idcor=grades.id_cor'
+      ''
+      ''
+      '    left join ( SELECT id_gro as idgro, des_gro_fr, des_gro_ar'
+      '  FROM paie.indice_groupe) as gg on gg.idgro=grades.id_gro'
+      ''
+      ''
+      ''
+      
+        '  left join (SELECT id_cat as idcat, des_fr_cat, des_ar_cat, min' +
+        '_cat, id_gro as n_grp'
+      '  FROM paie.indice_categorie) as ct on ct.idcat=grades.id_cat'
+      ''
+      ''
+      
+        '  left join (SELECT id_ech as idech, val_ech, id_cat as n_cat, n' +
+        'um_ech'
+      '  FROM paie.indice_echelon) as eh on eh.idech=grades.id_ech')
+    Active = True
+    Left = 304
+    Top = 112
+  end
+  object SGrade: TUniDataSource
+    DataSet = QGrade
+    Left = 304
+    Top = 160
+  end
+  object QCatégorie: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'SELECT id_cat, des_fr_cat, des_ar_cat, min_cat, id_gro,'
+      '       ---'
+      '       des_gro_fr, des_gro_ar'
+      ''
+      '  FROM paie.indice_categorie'
+      ''
+      'left join (SELECT id_gro as idgro, des_gro_fr, des_gro_ar'
+      
+        '  FROM paie.indice_groupe) as iii on iii.idgro=indice_categorie.' +
+        'id_gro')
+    Active = True
+    Left = 376
+    Top = 112
+  end
+  object SCatégorie: TUniDataSource
+    DataSet = QCatégorie
+    Left = 376
+    Top = 160
+  end
+  object QEchlons: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      '  SELECT id_ech, val_ech, id_cat, num_ech,'
+      '         ---'
+      '         des_fr_cat, des_ar_cat'
+      ''
+      '  FROM paie.indice_echelon'
+      ''
+      ''
+      
+        'left join (SELECT id_cat as idcat, des_fr_cat, des_ar_cat, min_c' +
+        'at, id_gro'
+      
+        '  FROM paie.indice_categorie) as grr on grr.idcat=indice_echelon' +
+        '.id_cat')
+    Active = True
+    Left = 448
+    Top = 112
+  end
+  object SEchlons: TUniDataSource
+    DataSet = QEchlons
+    Left = 448
+    Top = 160
+  end
+  object QGroupe: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from paie.indice_groupe')
+    Active = True
+    Left = 512
+    Top = 112
+  end
+  object SGroupe: TUniDataSource
+    DataSet = QGroupe
+    Left = 512
+    Top = 160
+  end
+  object QCorp: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from paie.corps')
+    Active = True
+    Left = 232
+    Top = 112
+  end
+  object SCorp: TUniDataSource
+    DataSet = QCorp
+    Left = 232
+    Top = 160
+  end
+  object QEnfant: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      
+        'SELECT id_enf, nom_fr_enf, nom_ar_enf, pre_fr_enf, pre_ar_enf, i' +
+        'd_sex_enf, '
+      '       dat_nai_enf, id_wil_nai_enf, num_act_nai_enf, id_cnj,'
+      '       ----'
+      '       des_fr_sex, des_ar_sex,'
+      '       ----'
+      '       des_fr_wil, des_ar_wil'
+      ''
+      '  FROM paie.enfants'
+      ' '
+      ''
+      ''
+      '  left join (SELECT id_sexe, des_fr_sex, des_ar_sex'
+      '  FROM paie.sexe) sw on sw.id_sexe=enfants.id_sex_enf'
+      ''
+      ''
+      ''
+      ' left join (SELECT id_wil, des_fr_wil, des_ar_wil, num_wil'
+      '  FROM public.wilaya) dz on dz.id_wil=enfants.id_wil_nai_enf')
+    MasterSource = SConjoint
+    MasterFields = 'id_con'
+    DetailFields = 'id_cnj'
+    Active = True
+    Left = 568
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'id_con'
+        ParamType = ptInput
+        Value = nil
+      end>
+  end
+  object QSexe: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from paie.sexe')
+    Active = True
+    Left = 624
+    Top = 8
+  end
+  object Ssexe: TUniDataSource
+    DataSet = QSexe
+    Left = 624
+    Top = 64
+  end
+end
