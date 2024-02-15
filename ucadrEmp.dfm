@@ -251,15 +251,18 @@ object cadrEmp: TcadrEmp
       AlignVert = avTop
       LayoutDirection = ldHorizontal
       Index = 0
+      AutoCreated = True
     end
     object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
       Parent = dxLayoutAutoCreatedGroup1
       AlignHorz = ahRight
       Index = 1
+      AutoCreated = True
     end
     object dxLayoutAutoCreatedGroup3: TdxLayoutAutoCreatedGroup
       Parent = dxLayoutControl1Group_Root
       Index = 1
+      AutoCreated = True
     end
   end
 end

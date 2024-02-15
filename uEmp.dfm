@@ -14,6 +14,7 @@ object frmEmp: TfrmEmp
   OldCreateOrder = False
   Visible = True
   WindowState = wsMaximized
+  OnActivate = FormActivate
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13

@@ -1,0 +1,30 @@
+unit ucadreNavigation;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinsDefaultPainters,
+  cxClasses, dxLayoutContainer, dxLayoutControl, Vcl.Menus,
+  dxLayoutControlAdapters, Vcl.StdCtrls, cxButtons;
+
+type
+  TFrame1 = class(TFrame)
+    dxLayoutControl1Group_Root: TdxLayoutGroup;
+    dxLayoutControl1: TdxLayoutControl;
+    dxLayoutGroup1: TdxLayoutGroup;
+    dxLayoutGroup2: TdxLayoutGroup;
+    cxButton1: TcxButton;
+    dxLayoutItem1: TdxLayoutItem;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -14,7 +14,7 @@ uses
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
   dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
   dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
-  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinOffice2019Colorful,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
   dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
@@ -23,7 +23,8 @@ uses
   dxSkinXmas2008Blue, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit,
   cxNavigator, dxDateRanges, Data.DB, cxDBData, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
-  cxGrid, cxDBLookupComboBox, cxTextEdit, ucadrEmp;
+  cxGrid, cxDBLookupComboBox, cxTextEdit, ucadrEmp,
+  cxDataControllerConditionalFormattingRulesManagerDialog;
 
 type
   TfrmEmp = class(TForm)
@@ -65,6 +66,7 @@ type
     cxGrid1DBTableView2des_ar_com1: TcxGridDBColumn;
     cxGrid1DBTableView2des_ar_sex1: TcxGridDBColumn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormActivate(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -78,8 +80,13 @@ implementation
 
 {$R *.dfm}
 
-uses uMain, uData, uData2, uEdEmp, uFamille, uCateg, uCharge, uEchlon, uCorps,
-  uGrade, uGroup, uLogin, uRecret, uIndemnite, uPrime, uRetenue, uSalair;
+uses uMain, uData;
+
+procedure TfrmEmp.FormActivate(Sender: TObject);
+begin
+frmMain.dxBarDBNavigator1.DataSource:=Data1.SEmp;
+frmmain.liste;
+end;
 
 procedure TfrmEmp.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

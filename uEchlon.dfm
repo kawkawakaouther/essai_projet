@@ -1,7 +1,7 @@
 object frmEchlon: TfrmEchlon
   Left = 0
   Top = 0
-  Caption = #1602#1575#1574#1605#1577' '#1575#1604#1571#1589#1606#1575#1601
+  Caption = #1602#1575#1574#1605#1577' '#1575#1604#1583#1585#1580#1575#1578
   ClientHeight = 402
   ClientWidth = 705
   Color = clBtnFace
@@ -113,12 +113,13 @@ object frmEchlon: TfrmEchlon
         Styles.Header = Data2.Header
       end
       object cxGrid1DBTableView2val_ech: TcxGridDBColumn
-        Caption = #1605#1572#1588#1585' '#1575#1604#1583#1585#1580#1577
+        Caption = #1575#1604#1605#1572#1588#1585' '#1575#1604#1573#1587#1578#1583#1604#1575#1604#1610
         DataBinding.FieldName = 'val_ech'
         HeaderAlignmentHorz = taCenter
         HeaderGlyphAlignmentHorz = taCenter
         Styles.Content = Data2.Content
         Styles.Header = Data2.Header
+        Width = 105
       end
     end
     object cxGrid1Level1: TcxGridLevel

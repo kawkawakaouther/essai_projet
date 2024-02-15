@@ -4,7 +4,7 @@
   Width = 671
   object UniConnection1: TUniConnection
     ProviderName = 'postgreSQL'
-    Port = 5432
+    Port = 5433
     Database = 'dev_team_paie'
     SpecificOptions.Strings = (
       'postgreSQL.UseUnicode=True')
@@ -75,12 +75,15 @@
         '  FROM public.commune) as cc on cc.id_comu=employes.id_com_adr_e' +
         'mp')
     Active = True
+    AfterPost = QEmpAfterPost
+    AfterCancel = QEmpAfterCancel
     Left = 160
     Top = 8
   end
   object SEmp: TUniDataSource
     AutoEdit = False
     DataSet = QEmp
+    OnStateChange = SEmpStateChange
     Left = 160
     Top = 56
   end
@@ -227,10 +230,10 @@
   object QRectement: TUniQuery
     Connection = UniConnection1
     SQL.Strings = (
-      'SELECT id_rec, dat_rec, dat_res, id_emp_rec, '
       
-        '       id_cat_rect, id_ech_rect,id_cor_rec,id_grad_rec,post_emp ' +
-        ','
+        'SELECT id_rec, dat_rec, dat_res, id_emp_rec, id_cat_rect, id_ech' +
+        '_rect, '
+      '       id_cor_rec, id_grad_rec, post_emp, id_grp,'
       '       ---'
       '       min_cat,'
       '       ---'
@@ -240,8 +243,12 @@
       '       ---'
       '       des_ar_gra, des_fr_gra,'
       '       ---'
-      '       des_fr_post, des_ar_post'
-      '     '
+      '       des_gro_fr, des_gro_ar,'
+      '       ---'
+      '       des_fr_post, des_ar_post,'
+      '       ---'
+      '       nom_ar_emp'
+      ''
       ' FROM paie.recrutements'
       ''
       
@@ -261,16 +268,35 @@
         'at_dec_cor, mat_dec_cor'
       '  FROM paie.corps) as pp on pp.id_cor=recrutements.id_cor_rec'
       ''
-      
-        'left join (SELECT id_gra, des_ar_gra, des_fr_gra, id_cor, id_gro' +
-        ', id_cat, id_ech'
+      'left join (SELECT id_gra, des_ar_gra, des_fr_gra, id_cor'
       '  FROM paie.grades) as rg on rg.id_gra=recrutements.id_grad_rec'
       ''
       'left join  (SELECT id_st, des_fr_post, des_ar_post, id_emp_sit'
       
         '  FROM paie.situation_post) as xd on xd.id_st=recrutements.post_' +
         'emp '
-      '')
+      ''
+      'left join  (SELECT id_gro, des_gro_fr, des_gro_ar'
+      
+        '  FROM paie.indice_groupe) as dgd on dgd.id_gro=recrutements.id_' +
+        'grp '
+      ''
+      
+        'left join  (SELECT id_emp, nom_fr_emp, pre_fr_emp, nom_ar_emp, p' +
+        're_ar_emp, id_nai_wil_emp, '
+      
+        '       dat_nai_emp, pre_fr_per_emp, pre_ar_per_emp, nom_fr_mer_e' +
+        'mp, '
+      
+        '       nom_ar_mer_emp, pre_fr_mer_emp, pre_ar_mer_emp, id_sex_em' +
+        'p, id_wil_adr_emp, '
+      
+        '       id_dai_adr_emp, id_com_adr_emp, adr_fr_emp, adr_ar_emp, m' +
+        'at_emp, '
+      '       nss_emp, pho_emp, con_emp, enf_emp'
+      
+        '  FROM paie.employes) as hhh on hhh.id_emp=recrutements.id_emp_r' +
+        'ec')
     MasterSource = SEmp
     MasterFields = 'id_emp'
     DetailFields = 'id_emp_rec'
@@ -293,17 +319,9 @@
   object QGrade: TUniQuery
     Connection = UniConnection1
     SQL.Strings = (
-      
-        'SELECT id_gra, des_ar_gra, des_fr_gra, id_cor, id_gro, id_cat, i' +
-        'd_ech,'
+      'SELECT id_gra, des_ar_gra, des_fr_gra, id_cor,'
       '       ----'
-      '       des_ar_cor, des_fr_cor,'
-      '       ---'
-      '        des_gro_fr, des_gro_ar,'
-      '       ---'
-      '       des_fr_cat, des_ar_cat,'
-      '       ---'
-      '        val_ech,num_ech'
+      '       des_ar_cor, des_fr_cor'
       ''
       '  FROM paie.grades'
       ''
@@ -313,22 +331,8 @@
         'dec_cor, dat_dec_cor, mat_dec_cor'
       '  FROM paie.corps) as gr on gr.idcor=grades.id_cor'
       ''
-      ''
-      '    left join ( SELECT id_gro as idgro, des_gro_fr, des_gro_ar'
-      '  FROM paie.indice_groupe) as gg on gg.idgro=grades.id_gro'
-      ''
-      ''
-      ''
-      
-        '  left join (SELECT id_cat as idcat, des_fr_cat, des_ar_cat, min' +
-        '_cat, id_gro as n_grp'
-      '  FROM paie.indice_categorie) as ct on ct.idcat=grades.id_cat'
-      ''
-      ''
-      
-        '  left join (SELECT id_ech as idech, val_ech, id_cat as n_cat, n' +
-        'um_ech'
-      '  FROM paie.indice_echelon) as eh on eh.idech=grades.id_ech')
+      '')
+    MasterSource = SCorp
     Active = True
     Left = 304
     Top = 112
@@ -351,13 +355,14 @@
       
         '  FROM paie.indice_groupe) as iii on iii.idgro=indice_categorie.' +
         'id_gro')
+    MasterSource = SGroupe
     Active = True
-    Left = 376
+    Left = 408
     Top = 112
   end
   object SCatégorie: TUniDataSource
     DataSet = QCatégorie
-    Left = 376
+    Left = 408
     Top = 160
   end
   object QEchlons: TUniQuery
@@ -375,14 +380,16 @@
         'at, id_gro'
       
         '  FROM paie.indice_categorie) as grr on grr.idcat=indice_echelon' +
-        '.id_cat')
+        '.id_cat'
+      'order by id_ech ASC')
+    MasterSource = SCatégorie
     Active = True
-    Left = 448
+    Left = 480
     Top = 112
   end
   object SEchlons: TUniDataSource
     DataSet = QEchlons
-    Left = 448
+    Left = 480
     Top = 160
   end
   object QGroupe: TUniQuery
@@ -390,12 +397,12 @@
     SQL.Strings = (
       'select * from paie.indice_groupe')
     Active = True
-    Left = 512
+    Left = 352
     Top = 112
   end
   object SGroupe: TUniDataSource
     DataSet = QGroupe
-    Left = 512
+    Left = 352
     Top = 160
   end
   object QCorp: TUniQuery
@@ -460,5 +467,18 @@
     DataSet = QSexe
     Left = 624
     Top = 64
+  end
+  object QPost: TUniQuery
+    Connection = UniConnection1
+    SQL.Strings = (
+      'select * from paie.situation_post')
+    Active = True
+    Left = 552
+    Top = 112
+  end
+  object SPost: TUniDataSource
+    DataSet = QPost
+    Left = 552
+    Top = 160
   end
 end

@@ -27,6 +27,8 @@ uses
 
 type
   TfrmEdFamille = class(TForm)
+    dxLayoutControl1Group_Root: TdxLayoutGroup;
+    dxLayoutControl1: TdxLayoutControl;
   private
     { Déclarations privées }
   public

@@ -1,0 +1,38 @@
+program gestion_paie;
+
+uses
+  Vcl.Forms,
+  uLogin in 'uLogin.pas' {frmLogin},
+  uMain in 'uMain.pas' {frmMain},
+  uEmp in 'uEmp.pas' {frmEmp},
+  uData in 'uData.pas' {Data1: TDataModule},
+  uCharge in 'uCharge.pas' {frmCharge},
+  uEdEmp in 'uEdEmp.pas' {frmEdEmp},
+  uFamille in 'uFamille.pas' {frmFamille},
+  uData2 in 'uData2.pas' {Data2: TDataModule},
+  uRecret in 'uRecret.pas' {frmRecretem},
+  uCorps in 'uCorps.pas' {frmCorp},
+  uGrade in 'uGrade.pas' {frmGrade},
+  uCateg in 'uCateg.pas' {frmCateg},
+  uEchlon in 'uEchlon.pas' {frmEchlon},
+  uGroup in 'uGroup.pas' {frmGroupe},
+  ucadrEmp in 'ucadrEmp.pas' {cadrEmp: TFrame},
+  uSalair in 'uSalair.pas' {frmSalair},
+  uRetenue in 'uRetenue.pas' {frmRetenue},
+  uPrime in 'uPrime.pas' {frmPrime},
+  uIndemnite in 'uIndemnite.pas' {frmIndemnite},
+  uEdfamille in 'uEdfamille.pas' {frmEdFamille},
+  uEdrecretement in 'uEdrecretement.pas' {frmEdrecretement},
+  ucadreNavigation in 'ucadreNavigation.pas' {Frame1: TFrame};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TData1, Data1);
+  Application.CreateForm(TData2, Data2);
+  Application.CreateForm(TfrmCharge, frmCharge);
+  Application.Run;
+end.

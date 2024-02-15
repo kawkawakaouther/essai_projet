@@ -14,7 +14,7 @@ uses
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
   dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
   dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
-  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinOffice2019Colorful,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
   dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
@@ -23,7 +23,7 @@ uses
   dxSkinXmas2008Blue, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit,
   cxNavigator, dxDateRanges, Data.DB, cxDBData, cxGridLevel, cxClasses,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView,
-  cxGrid, cxTextEdit;
+  cxGrid, cxTextEdit, cxDataControllerConditionalFormattingRulesManagerDialog;
 
 type
   TfrmRecretem = class(TForm)
@@ -60,9 +60,9 @@ implementation
 
 {$R *.dfm}
 
-uses uCharge, uData, uData2, uEdEmp, uEmp, uMain, uCateg, uCorps, uEchlon,
-  uFamille, uGrade, uGroup, uIndemnite, uLogin, uPrime, uRetenue,
-  uSalair;
+uses uMain;
+
+
 
 procedure TfrmRecretem.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

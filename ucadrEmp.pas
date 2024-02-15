@@ -14,7 +14,7 @@ uses
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
   dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
   dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
-  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinOffice2019Colorful,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
   dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
   dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
   dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinsDefaultPainters,
@@ -55,7 +55,6 @@ implementation
 
 {$R *.dfm}
 
-uses uCharge, uData, uData2, uEdEmp, uEmp, uFamille, uIndemnite, uMain, uPrime,
-  uRecret, uRetenue, uSalair;
+
 
 end.

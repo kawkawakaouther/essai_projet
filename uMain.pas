@@ -6,26 +6,13 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs,
   dxBar, dxRibbon, dxRibbonForm, dxRibbonSkins, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxClasses, dxRibbonBackstageView, cxBarEditItem,
-  dxSkinsCore, dxSkinBlack, dxSkinBlue, dxSkinBlueprint, dxSkinCaramel,
-  dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide, dxSkinDevExpressDarkStyle,
-  dxSkinDevExpressStyle, dxSkinFoggy, dxSkinGlassOceans, dxSkinHighContrast,
-  dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin,
-  dxSkinMetropolis, dxSkinMetropolisDark, dxSkinMoneyTwins,
-  dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
-  dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinOffice2010Black,
-  dxSkinOffice2010Blue, dxSkinOffice2010Silver, dxSkinOffice2013DarkGray,
-  dxSkinOffice2013LightGray, dxSkinOffice2013White, dxSkinOffice2016Colorful,
-  dxSkinOffice2016Dark, dxSkinOffice2019Colorful, dxSkinPumpkin, dxSkinSeven,
-  dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus, dxSkinSilver,
-  dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008, dxSkinTheAsphaltWorld,
-  dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine,
-  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
-  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue, dxRibbonCustomizationForm, cxTextEdit, cxContainer,
-  cxEdit, dxSkinsForm, dxStatusBar, dxRibbonStatusBar, cxLabel, dxGallery,
+
+  dxRibbonCustomizationForm, cxTextEdit, cxContainer,
+  cxEdit, dxStatusBar, dxRibbonStatusBar, cxLabel, dxGallery,
   dxGalleryControl, dxRibbonBackstageViewGalleryControl, dxNavBar, dxBarDBNav,
   dxRibbonGallery, dxSkinChooserGallery, dxLayoutLookAndFeels, dxNavBarCollns,
-  dxNavBarBase, dxNavBarStyles, cxStyles, Vcl.ExtCtrls, Vcl.StdCtrls;
+  dxNavBarBase, dxNavBarStyles, cxStyles, Vcl.ExtCtrls, Vcl.StdCtrls,
+  dxSkinsCore, dxSkinsDefaultPainters, dxSkinsForm;
 
 type
   TfrmMain = class(TdxRibbonForm)
@@ -41,7 +28,6 @@ type
     dxRibbonBackstageViewGalleryControl1Group1: TdxRibbonBackstageViewGalleryGroup;
     dxSkinController1: TdxSkinController;
     dxRibbonBackstageViewGalleryControl1Group1Item1: TdxRibbonBackstageViewGalleryItem;
-    dxBarManager1Bar2: TdxBar;
     cxBarEditItem1: TcxBarEditItem;
     dxLayoutLookAndFeelList1: TdxLayoutLookAndFeelList;
     dxLayoutSkinLookAndFeel1: TdxLayoutSkinLookAndFeel;
@@ -102,6 +88,7 @@ type
     dxNavBar1Item2: TdxNavBarItem;
     Label1: TLabel;
     Timer1: TTimer;
+    dxLayoutStandardLookAndFeel1: TdxLayoutStandardLookAndFeel;
     procedure dxSkinChooserGalleryItem1SkinChanged(Sender: TObject;
       const ASkinName: string);
     procedure btPriorClick(Sender: TObject);
@@ -154,9 +141,10 @@ implementation
 
 {$R *.dfm}
 
-uses uEmp, uCharge, uData, uFamille, uData2, uEdEmp, uRecret, uCorps, uGrade,
-  uCateg, uEchlon, uGroup, uPrime, uRetenue, uLogin, uSalair, uIndemnite,
-  uEdfamille;
+uses uEdEmp, uEmp, uFamille, uGroup, uGrade, uCateg, uEchlon, uCorps, uRecret,
+  uCharge, uEdrecretement, uLogin, uData, uData2, uEdfamille, uIndemnite,
+  uPrime, uRetenue, uSalair;
+
 
 { TForm2 }
 procedure TfrmMain.Edit;
@@ -186,6 +174,7 @@ end;
 procedure TfrmMain.btCancelClick(Sender: TObject);
 begin
 dxBarDBNavCancel1.DoClick;
+
 end;
 
 procedure TfrmMain.btDeleteClick(Sender: TObject);
@@ -200,18 +189,20 @@ end;
 
 procedure TfrmMain.btInsertClick(Sender: TObject);
 begin
-  // dxBarDBNavInsert1.DoClick;
-   frmEdEmp.Show;
+dxBarDBNavInsert1.DoClick;
+
 end;
 
 procedure TfrmMain.btNextClick(Sender: TObject);
 begin
-   dxBarDBNavNext1.DoClick;
+//dxBarDBNavNext1.DoClick;
+frmEdrecretement.Show;
 end;
 
 procedure TfrmMain.btPostClick(Sender: TObject);
 begin
 dxBarDBNavPost1.DoClick;
+frmMain.ActiveMDIChild.Close;
 end;
 
 procedure TfrmMain.btPriorClick(Sender: TObject);
@@ -359,8 +350,8 @@ for a := 0 to frmMain.MDIChildCount-1 do
 if frmMain.MDIChildren[a].Name='frmCharge' then
 frmMain.MDIChildren[a].Close;
 frmCharge.bringtofront;
-frmIndemnite:=TfrmIndemnite.Create(frmMain);
-frmIndemnite.BringToFront;
+//frmIndemnite:=TfrmIndemnite.Create(frmMain);
+//frmIndemnite.BringToFront;
 //frmCharge.hide;
 end;
 
@@ -392,8 +383,8 @@ for n := 0 to frmMain.MDIChildCount-1 do
 if frmMain.MDIChildren[n].Name='frmCharge' then
 frmMain.MDIChildren[n].Close;
 frmCharge.bringtofront;
-frmSalair:=TfrmSalair.Create(frmMain);
-frmSalair.BringToFront;
+//frmSalair:=TfrmSalair.Create(frmMain);
+//frmSalair.BringToFront;
 //frmCharge.hide;
 end;
 
@@ -404,8 +395,8 @@ for m := 0 to frmMain.MDIChildCount-1 do
 if frmMain.MDIChildren[m].Name='frmCharge' then
 frmMain.MDIChildren[m].Close;
 frmCharge.bringtofront;
-frmPrime:=TfrmPrime.Create(frmMain);
-frmPrime.BringToFront;
+//frmPrime:=TfrmPrime.Create(frmMain);
+//frmPrime.BringToFront;
 //frmCharge.hide;
 end;
 

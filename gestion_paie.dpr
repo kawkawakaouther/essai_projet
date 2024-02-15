@@ -22,7 +22,8 @@ uses
   uPrime in 'uPrime.pas' {frmPrime},
   uIndemnite in 'uIndemnite.pas' {frmIndemnite},
   uEdfamille in 'uEdfamille.pas' {frmEdFamille},
-  uEdrecretement in 'uEdrecretement.pas' {frmEdrecretement};
+  uEdrecretement in 'uEdrecretement.pas' {frmEdrecretement},
+  ucadreNavigation in 'ucadreNavigation.pas' {Frame1: TFrame};
 
 {$R *.res}
 
@@ -31,21 +32,8 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TData1, Data1);
-  Application.CreateForm(TfrmCharge, frmCharge);
   Application.CreateForm(TData2, Data2);
-  Application.CreateForm(TfrmEmp, frmEmp);
-  Application.CreateForm(TfrmFamille, frmFamille);
-  Application.CreateForm(TfrmRecretem, frmRecretem);
-  Application.CreateForm(TfrmCorp, frmCorp);
-  Application.CreateForm(TfrmGrade, frmGrade);
-  Application.CreateForm(TfrmCateg, frmCateg);
-  Application.CreateForm(TfrmEchlon, frmEchlon);
-  Application.CreateForm(TfrmGroupe, frmGroupe);
-  Application.CreateForm(TfrmSalair, frmSalair);
-  Application.CreateForm(TfrmRetenue, frmRetenue);
-  Application.CreateForm(TfrmPrime, frmPrime);
-  Application.CreateForm(TfrmIndemnite, frmIndemnite);
+  Application.CreateForm(TfrmCharge, frmCharge);
   Application.CreateForm(TfrmEdrecretement, frmEdrecretement);
-  Application.CreateForm(TfrmEdEmp, frmEdEmp);
   Application.Run;
 end.
