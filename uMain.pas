@@ -12,7 +12,22 @@ uses
   dxGalleryControl, dxRibbonBackstageViewGalleryControl, dxNavBar, dxBarDBNav,
   dxRibbonGallery, dxSkinChooserGallery, dxLayoutLookAndFeels, dxNavBarCollns,
   dxNavBarBase, dxNavBarStyles, cxStyles, Vcl.ExtCtrls, Vcl.StdCtrls,
-  dxSkinsCore, dxSkinsDefaultPainters, dxSkinsForm;
+  dxSkinsCore, dxSkinsDefaultPainters, dxSkinsForm, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkinLilian, dxSkinLiquidSky,
+  dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
+  dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  dxSkinOffice2016Colorful, dxSkinOffice2016Dark, dxSkinOffice2019Colorful,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringtime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue;
 
 type
   TfrmMain = class(TdxRibbonForm)
@@ -28,7 +43,6 @@ type
     dxRibbonBackstageViewGalleryControl1Group1: TdxRibbonBackstageViewGalleryGroup;
     dxSkinController1: TdxSkinController;
     dxRibbonBackstageViewGalleryControl1Group1Item1: TdxRibbonBackstageViewGalleryItem;
-    cxBarEditItem1: TcxBarEditItem;
     dxLayoutLookAndFeelList1: TdxLayoutLookAndFeelList;
     dxLayoutSkinLookAndFeel1: TdxLayoutSkinLookAndFeel;
     dxRibbon1Tab2: TdxRibbonTab;
@@ -50,7 +64,6 @@ type
     dxBarLargeButton11: TdxBarLargeButton;
     dxBarButton1: TdxBarButton;
     dxBarButton2: TdxBarButton;
-    dxBarManager1Bar8: TdxBar;
     dxBarLargeButton12: TdxBarLargeButton;
     btDelete: TdxBarLargeButton;
     dxBarButton3: TdxBarButton;
@@ -89,6 +102,23 @@ type
     Label1: TLabel;
     Timer1: TTimer;
     dxLayoutStandardLookAndFeel1: TdxLayoutStandardLookAndFeel;
+    dxRibbon1Tab3: TdxRibbonTab;
+    dxRibbon1Tab4: TdxRibbonTab;
+    dxBarEdit2: TdxBarEdit;
+    dxBarButton5: TdxBarButton;
+    dxBarEdit3: TdxBarEdit;
+    dxBarButton7: TdxBarButton;
+    dxBarLargeButton1: TdxBarLargeButton;
+    dxBarLargeButton3: TdxBarLargeButton;
+    dxBarLargeButton4: TdxBarLargeButton;
+    dxBarManager1Bar2: TdxBar;
+    dxBarLargeButton5: TdxBarLargeButton;
+    dxBarLargeButton6: TdxBarLargeButton;
+    dxBarLargeButton7: TdxBarLargeButton;
+    dxBarLargeButton8: TdxBarLargeButton;
+    dxBarLargeButton9: TdxBarLargeButton;
+    dxBarLargeButton13: TdxBarLargeButton;
+    dxBarLargeButton14: TdxBarLargeButton;
     procedure dxSkinChooserGalleryItem1SkinChanged(Sender: TObject;
       const ASkinName: string);
     procedure btPriorClick(Sender: TObject);

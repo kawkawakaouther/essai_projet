@@ -1,9 +1,10 @@
 ﻿object frmEdrecretement: TfrmEdrecretement
   Left = 0
   Top = 0
+  BiDiMode = bdRightToLeft
   Caption = #1573#1583#1582#1575#1604' '#1576#1610#1575#1606#1575#1578' '#1575#1604#1578#1608#1592#1610#1601
-  ClientHeight = 629
-  ClientWidth = 916
+  ClientHeight = 540
+  ClientWidth = 867
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +13,8 @@
   Font.Style = []
   FormStyle = fsMDIChild
   OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poDefault
   Visible = True
   WindowState = wsMaximized
   PixelsPerInch = 96
@@ -19,12 +22,12 @@
   object dxLayoutControl2: TdxLayoutControl
     Left = 0
     Top = 0
-    Width = 916
-    Height = 629
+    Width = 867
+    Height = 540
     Align = alClient
     BevelInner = bvNone
     BevelOuter = bvNone
-    BiDiMode = bdLeftToRight
+    BiDiMode = bdRightToLeft
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -36,10 +39,11 @@
     ShowHint = False
     TabOrder = 0
     LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
-    ExplicitTop = 22
+    ExplicitWidth = 916
+    ExplicitHeight = 629
     object cxDBDateEdit2: TcxDBDateEdit
-      Left = 663
-      Top = 342
+      Left = 39
+      Top = 310
       DataBinding.DataField = 'dat_rec'
       DataBinding.DataSource = Data1.SRecretem
       Style.BorderColor = clWindowFrame
@@ -55,8 +59,8 @@
       Width = 165
     end
     object cxDBDateEdit3: TcxDBDateEdit
-      Left = 495
-      Top = 342
+      Left = 212
+      Top = 310
       AutoSize = False
       DataBinding.DataField = 'dat_res'
       DataBinding.DataSource = Data1.SRecretem
@@ -70,8 +74,8 @@
       Width = 160
     end
     object cxDBLookupComboBox1: TcxDBLookupComboBox
-      Left = 419
-      Top = 144
+      Left = 55
+      Top = 112
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'id_cor_rec'
       DataBinding.DataSource = Data1.SRecretem
@@ -95,8 +99,8 @@
       Width = 393
     end
     object cxDBLookupComboBox6: TcxDBLookupComboBox
-      Left = 419
-      Top = 205
+      Left = 55
+      Top = 173
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'id_grad_rec'
       DataBinding.DataSource = Data1.SRecretem
@@ -117,8 +121,8 @@
       Width = 393
     end
     object cxDBLookupComboBox7: TcxDBLookupComboBox
-      Left = 419
-      Top = 265
+      Left = 55
+      Top = 233
       BiDiMode = bdRightToLeft
       Enabled = False
       ParentBiDiMode = False
@@ -133,8 +137,8 @@
       Width = 393
     end
     object cxDBLookupComboBox8: TcxDBLookupComboBox
-      Left = 79
-      Top = 343
+      Left = 472
+      Top = 311
       AutoSize = False
       Properties.GridMode = True
       Properties.ListColumns = <>
@@ -148,8 +152,8 @@
       Width = 316
     end
     object cxDBLookupComboBox9: TcxDBLookupComboBox
-      Left = 606
-      Top = 83
+      Left = 55
+      Top = 51
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'id_grp'
       DataBinding.DataSource = Data1.SRecretem
@@ -175,8 +179,8 @@
       Width = 206
     end
     object cxDBLookupComboBox10: TcxDBLookupComboBox
-      Left = 667
-      Top = 490
+      Left = 55
+      Top = 458
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'id_cat_rect'
       DataBinding.DataSource = Data1.SRecretem
@@ -201,8 +205,8 @@
       Width = 145
     end
     object cxDBLookupComboBox11: TcxDBLookupComboBox
-      Left = 187
-      Top = 490
+      Left = 535
+      Top = 458
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'id_ech_rect'
       DataBinding.DataSource = Data1.SRecretem
@@ -224,8 +228,8 @@
       Width = 145
     end
     object cxDBLabel1: TcxDBLabel
-      Left = 48
-      Top = 490
+      Left = 688
+      Top = 458
       DataBinding.DataField = 'val_ech'
       DataBinding.DataSource = Data1.SRecretem
       Properties.Alignment.Horz = taCenter
@@ -233,12 +237,12 @@
       Style.HotTrack = False
       Height = 27
       Width = 131
-      AnchorX = 114
-      AnchorY = 504
+      AnchorX = 754
+      AnchorY = 472
     end
     object cxDBLabel2: TcxDBLabel
-      Left = 528
-      Top = 490
+      Left = 208
+      Top = 458
       BiDiMode = bdRightToLeftNoAlign
       DataBinding.DataField = 'min_cat'
       DataBinding.DataSource = Data1.SRecretem
@@ -249,12 +253,12 @@
       Style.HotTrack = False
       Height = 27
       Width = 131
-      AnchorX = 594
-      AnchorY = 504
+      AnchorX = 274
+      AnchorY = 472
     end
     object cxDBDateEdit4: TcxDBDateEdit
-      Left = 240
-      Top = 404
+      Left = 472
+      Top = 372
       AutoSize = False
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
@@ -266,8 +270,8 @@
       Width = 155
     end
     object cxDBTextEdit5: TcxDBTextEdit
-      Left = 79
-      Top = 404
+      Left = 635
+      Top = 372
       AutoSize = False
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
@@ -277,8 +281,8 @@
       Width = 153
     end
     object cxDBTextEdit16: TcxDBTextEdit
-      Left = 187
-      Top = 551
+      Left = 535
+      Top = 519
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -286,8 +290,8 @@
       Width = 145
     end
     object cxDBTextEdit17: TcxDBTextEdit
-      Left = 48
-      Top = 551
+      Left = 688
+      Top = 519
       AutoSize = False
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
@@ -297,8 +301,8 @@
       Width = 131
     end
     object cxDBLookupComboBox14: TcxDBLookupComboBox
-      Left = 359
-      Top = 628
+      Left = 363
+      Top = 596
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'post_emp'
       DataBinding.DataSource = Data1.SRecretem
@@ -318,8 +322,8 @@
       Width = 145
     end
     object cxDBLookupComboBox15: TcxDBLookupComboBox
-      Left = 48
-      Top = 83
+      Left = 488
+      Top = 51
       Properties.ListColumns = <>
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
@@ -330,8 +334,8 @@
       Width = 331
     end
     object cxDBTextEdit18: TcxDBTextEdit
-      Left = 48
-      Top = 144
+      Left = 488
+      Top = 112
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -339,8 +343,8 @@
       Width = 331
     end
     object cxDBTextEdit19: TcxDBTextEdit
-      Left = 48
-      Top = 266
+      Left = 488
+      Top = 234
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
       Style.HotTrack = False
@@ -348,8 +352,8 @@
       Width = 331
     end
     object cxDBTextEdit20: TcxDBTextEdit
-      Left = 48
-      Top = 205
+      Left = 488
+      Top = 173
       AutoSize = False
       Style.BorderColor = clWindowFrame
       Style.BorderStyle = ebs3D
@@ -359,8 +363,8 @@
       Width = 331
     end
     object cxDBLookupComboBox16: TcxDBLookupComboBox
-      Left = 512
-      Top = 628
+      Left = 39
+      Top = 596
       BiDiMode = bdRightToLeft
       ParentBiDiMode = False
       Properties.ListColumns = <
@@ -387,8 +391,8 @@
       Width = 316
     end
     object cxDBMemo2: TcxDBMemo
-      Left = 359
-      Top = 689
+      Left = 39
+      Top = 657
       BiDiMode = bdRightToLeft
       ParentBiDiMode = False
       Properties.Alignment = taLeftJustify
@@ -400,8 +404,8 @@
       Width = 469
     end
     object CheckBox1: TCheckBox
-      Left = 715
-      Top = 240
+      Left = 55
+      Top = 208
       Width = 97
       Height = 17
       BiDiMode = bdRightToLeft
@@ -456,6 +460,7 @@
         221170229611590483A81A29B99C9B913FEB6C8A67C396C0231659029E200CE5
         670000000049454E44AE426082}
       CaptionOptions.Text = #1575#1604#1608#1590#1593#1610#1577' '#1575#1604#1608#1592#1610#1601#1610#1577
+      CaptionOptions.Visible = False
       ButtonOptions.Buttons = <>
       ItemIndex = 1
       Index = 0

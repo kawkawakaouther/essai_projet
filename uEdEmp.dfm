@@ -40,7 +40,7 @@ object frmEdEmp: TfrmEdEmp
     LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
     object cxDBTextEdit1: TcxDBTextEdit
       Left = 273
-      Top = 14
+      Top = 51
       AutoSize = False
       BiDiMode = bdLeftToRight
       DataBinding.DataField = 'nom_fr_emp'
@@ -55,7 +55,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit2: TcxDBTextEdit
       Left = 273
-      Top = 80
+      Top = 117
       AutoSize = False
       DataBinding.DataField = 'pre_fr_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -68,7 +68,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit3: TcxDBTextEdit
       Left = 583
-      Top = 14
+      Top = 51
       AutoSize = False
       DataBinding.DataField = 'nom_ar_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -82,7 +82,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit4: TcxDBTextEdit
       Left = 583
-      Top = 80
+      Top = 117
       AutoSize = False
       DataBinding.DataField = 'pre_ar_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -96,7 +96,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit6: TcxDBTextEdit
       Left = 89
-      Top = -11
+      Top = 26
       AutoSize = False
       BiDiMode = bdLeftToRight
       DataBinding.DataField = 'mat_emp'
@@ -112,7 +112,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBDateEdit1: TcxDBDateEdit
       Left = 583
-      Top = 149
+      Top = 186
       AutoSize = False
       DataBinding.DataField = 'dat_nai_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -128,7 +128,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit7: TcxDBTextEdit
       Left = 273
-      Top = 252
+      Top = 289
       AutoSize = False
       DataBinding.DataField = 'pre_fr_per_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -141,7 +141,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit8: TcxDBTextEdit
       Left = 620
-      Top = 252
+      Top = 289
       AutoSize = False
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'pre_ar_per_emp'
@@ -158,7 +158,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit9: TcxDBTextEdit
       Left = 273
-      Top = 321
+      Top = 358
       AutoSize = False
       BiDiMode = bdLeftToRight
       DataBinding.DataField = 'nom_fr_mer_emp'
@@ -173,7 +173,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit10: TcxDBTextEdit
       Left = 620
-      Top = 390
+      Top = 427
       AutoSize = False
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'nom_ar_mer_emp'
@@ -188,7 +188,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit11: TcxDBTextEdit
       Left = 273
-      Top = 390
+      Top = 427
       AutoSize = False
       DataBinding.DataField = 'pre_fr_mer_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -201,7 +201,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit12: TcxDBTextEdit
       Left = 620
-      Top = 321
+      Top = 358
       AutoSize = False
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'pre_ar_mer_emp'
@@ -217,7 +217,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBImage1: TcxDBImage
       Left = 74
-      Top = 121
+      Top = 158
       DataBinding.DataField = 'pho_emp'
       DataBinding.DataSource = Data1.SEmp
       Properties.Caption = #1571#1606#1602#1585' '#1607#1606#1575
@@ -232,7 +232,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit13: TcxDBTextEdit
       Left = 341
-      Top = 511
+      Top = 548
       AutoSize = False
       DataBinding.DataField = 'adr_fr_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -245,7 +245,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit14: TcxDBTextEdit
       Left = 32
-      Top = 571
+      Top = 608
       AutoSize = False
       DataBinding.DataField = 'nss_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -258,7 +258,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBLookupComboBox2: TcxDBLookupComboBox
       Left = 273
-      Top = 149
+      Top = 186
       AutoSize = False
       BiDiMode = bdRightToLeft
       DataBinding.DataField = 'id_nai_wil_emp'
@@ -292,7 +292,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBLookupComboBox3: TcxDBLookupComboBox
       Left = 662
-      Top = 474
+      Top = 511
       AutoSize = False
       BiDiMode = bdLeftToRight
       DataBinding.DataField = 'id_wil_adr_emp'
@@ -326,7 +326,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBLookupComboBox4: TcxDBLookupComboBox
       Left = 473
-      Top = 474
+      Top = 511
       AutoSize = False
       BiDiMode = bdRightToLeftReadingOnly
       DataBinding.DataField = 'id_dai_adr_emp'
@@ -356,7 +356,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBLookupComboBox5: TcxDBLookupComboBox
       Left = 273
-      Top = 474
+      Top = 511
       AutoSize = False
       BiDiMode = bdRightToLeftReadingOnly
       DataBinding.DataField = 'id_com_adr_emp'
@@ -386,7 +386,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object cxDBTextEdit15: TcxDBTextEdit
       Left = 341
-      Top = 552
+      Top = 589
       AutoSize = False
       DataBinding.DataField = 'adr_ar_emp'
       DataBinding.DataSource = Data1.SEmp
@@ -400,7 +400,7 @@ object frmEdEmp: TfrmEdEmp
     end
     object SpeedButton1: TSpeedButton
       Left = 129
-      Top = 291
+      Top = 328
       Width = 23
       Height = 22
       BiDiMode = bdLeftToRight
@@ -735,9 +735,9 @@ object frmEdEmp: TfrmEdEmp
         105DDB036E320644EC01B338C53BBAF8FEEB4F308C38A050F805A49F403ADB09
         F807E8FE5DC02F32F3002A998F10440000000049454E44AE426082}
       CaptionOptions.Layout = clLeft
-      CaptionOptions.Text = #1575#1604#1581#1575#1604#1577' '#1575#1604#1605#1583#1606#1610#1577
+      CaptionOptions.Visible = False
+      CaptionOptions.VisibleElements = [cveImage]
       ButtonOptions.Buttons = <>
-      ItemIndex = 1
       LayoutDirection = ldHorizontal
       Index = 0
     end
