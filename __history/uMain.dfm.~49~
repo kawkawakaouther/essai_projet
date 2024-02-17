@@ -2,8 +2,8 @@ object frmMain: TfrmMain
   Left = 0
   Top = 0
   Caption = #1575#1604#1589#1601#1581#1577' '#1575#1604#1585#1574#1610#1587#1610#1577
-  ClientHeight = 480
-  ClientWidth = 749
+  ClientHeight = 613
+  ClientWidth = 902
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,17 +15,26 @@ object frmMain: TfrmMain
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 438
+    Width = 31
+    Height = 13
+    Caption = 'Label1'
+  end
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
-    Width = 749
-    Height = 169
+    Width = 902
+    Height = 163
+    Touch.ParentTabletOptions = False
+    Touch.TabletOptions = [toPressAndHold]
     ApplicationButton.Menu = dxRibbonBackstageView1
     BarManager = dxBarManager1
     CapitalizeTabCaptions = bDefault
     Style = rs2016
     ColorSchemeAccent = rcsaBlue
-    ColorSchemeName = 'MoneyTwins'
+    ColorSchemeName = 'Colorful'
     Fonts.ApplicationButton.Charset = ANSI_CHARSET
     Fonts.ApplicationButton.Color = clWindowText
     Fonts.ApplicationButton.Height = -15
@@ -45,10 +54,10 @@ object frmMain: TfrmMain
     QuickAccessToolbar.Toolbar = dxBarManager1Bar1
     SupportNonClientDrawing = True
     Contexts = <>
-    TabAreaToolbar.Toolbar = dxBarManager1Bar2
     TabOrder = 0
     TabStop = False
     object dxRibbon1Tab1: TdxRibbonTab
+      Active = True
       Caption = #1575#1604#1578#1587#1580#1610#1604#1575#1578
       Groups = <
         item
@@ -70,7 +79,6 @@ object frmMain: TfrmMain
       Index = 0
     end
     object dxRibbon1Tab2: TdxRibbonTab
-      Active = True
       Caption = #1573#1582#1578#1610#1575#1585#1575#1578
       Groups = <
         item
@@ -147,8 +155,8 @@ object frmMain: TfrmMain
   end
   object dxRibbonStatusBar1: TdxRibbonStatusBar
     Left = 0
-    Top = 457
-    Width = 749
+    Top = 590
+    Width = 902
     Height = 23
     Panels = <>
     Ribbon = dxRibbon1
@@ -159,18 +167,19 @@ object frmMain: TfrmMain
     Font.Style = []
   end
   object dxNavBar1: TdxNavBar
-    Left = 568
-    Top = 169
+    Left = 721
+    Top = 163
     Width = 181
-    Height = 288
+    Height = 427
     ParentCustomHint = False
     Align = alRight
     ActiveGroupIndex = 0
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
     TabOrder = 3
-    LookAndFeel.Kind = lfOffice11
+    LookAndFeel.Kind = lfFlat
     LookAndFeel.NativeStyle = True
+    LookAndFeel.ScrollbarMode = sbmTouch
     LookAndFeel.SkinName = ''
     LookAndFeelSchemes.Flat = 15
     LookAndFeelSchemes.Standard = 15
@@ -182,8 +191,8 @@ object frmMain: TfrmMain
     OptionsBehavior.Common.AllowExpandAnimation = True
     OptionsBehavior.Common.AllowSelectLinks = True
     OptionsBehavior.NavigationPane.Collapsible = True
-    ExplicitTop = 132
-    ExplicitHeight = 325
+    ExplicitTop = 128
+    ExplicitHeight = 462
     object dxNavBar1Group1: TdxNavBarGroup
       Caption = #1576#1610#1575#1606#1575#1578' '#1575#1604#1605#1608#1592#1601
       SelectedLinkIndex = -1
@@ -208,6 +217,7 @@ object frmMain: TfrmMain
       Caption = #1593#1605#1604#1610#1575#1578' '#1581#1587#1575#1576' '#1575#1604#1571#1580#1608#1585
       SelectedLinkIndex = -1
       TopVisibleLinkIndex = 0
+      OptionsExpansion.Expanded = False
       Links = <
         item
           Item = dxNavBar1Item8
@@ -232,7 +242,6 @@ object frmMain: TfrmMain
       Caption = #1578#1581#1608#1610#1604' '#1575#1604#1585#1608#1575#1578#1576
       SelectedLinkIndex = -1
       TopVisibleLinkIndex = 0
-      OptionsExpansion.Expanded = False
       Links = <
         item
           Item = dxNavBar1Item9
@@ -258,6 +267,7 @@ object frmMain: TfrmMain
       Caption = #1575#1604#1578#1606#1592#1610#1605' '#1608#1575#1604#1578#1602#1583#1605' '#1575#1604#1608#1592#1610#1601#1610
       SelectedLinkIndex = -1
       TopVisibleLinkIndex = 0
+      OptionsExpansion.Expanded = False
       Links = <
         item
           Item = dxNavBar1Item11
@@ -352,7 +362,7 @@ object frmMain: TfrmMain
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
-    Font.Style = []
+    Font.Style = [fsBold]
     Categories.Strings = (
       'Default'
       'DB Navigator')
@@ -362,29 +372,14 @@ object frmMain: TfrmMain
     Categories.Visibles = (
       True
       True)
+    MenusShowRecentItemsFirst = False
     PopupMenuLinks = <>
-    UseSystemFont = True
-    Left = 568
+    UseSystemFont = False
+    Left = 728
     Top = 8
     PixelsPerInch = 96
     object dxBarManager1Bar1: TdxBar
       Caption = 'Quick Access Toolbar'
-      CaptionButtons = <>
-      DockedLeft = 0
-      DockedTop = 0
-      FloatLeft = 0
-      FloatTop = 0
-      FloatClientWidth = 0
-      FloatClientHeight = 0
-      ItemLinks = <>
-      OneOnRow = True
-      Row = 0
-      UseOwnFont = False
-      Visible = True
-      WholeRow = False
-    end
-    object dxBarManager1Bar2: TdxBar
-      Caption = 'Tab Area Toolbar'
       CaptionButtons = <>
       DockedLeft = 0
       DockedTop = 0
@@ -426,7 +421,7 @@ object frmMain: TfrmMain
     object dxBarManager1Bar4: TdxBar
       Caption = 'Custom 2'
       CaptionButtons = <>
-      DockedLeft = 93
+      DockedLeft = 94
       DockedTop = 0
       FloatLeft = 736
       FloatTop = 2
@@ -454,7 +449,7 @@ object frmMain: TfrmMain
     object dxBarManager1Bar5: TdxBar
       Caption = 'Custom 3'
       CaptionButtons = <>
-      DockedLeft = 227
+      DockedLeft = 229
       DockedTop = 0
       FloatLeft = 736
       FloatTop = 2
@@ -502,7 +497,7 @@ object frmMain: TfrmMain
     object dxBarManager1Bar7: TdxBar
       Caption = 'Custom 5'
       CaptionButtons = <>
-      DockedLeft = 108
+      DockedLeft = 109
       DockedTop = 0
       FloatLeft = 736
       FloatTop = 2
@@ -526,7 +521,7 @@ object frmMain: TfrmMain
     object dxBarManager1Bar8: TdxBar
       Caption = 'Custom 6'
       CaptionButtons = <>
-      DockedLeft = 361
+      DockedLeft = 364
       DockedTop = 0
       FloatLeft = 736
       FloatTop = 2
@@ -1712,14 +1707,17 @@ object frmMain: TfrmMain
   object dxSkinController1: TdxSkinController
     Kind = lfOffice11
     NativeStyle = False
-    SkinName = 'MoneyTwins'
-    Left = 504
-    Top = 8
+    SkinName = 'UserSkin'
+    Left = 712
+    Top = 80
   end
   object dxLayoutLookAndFeelList1: TdxLayoutLookAndFeelList
-    Left = 400
-    Top = 8
+    Left = 632
+    Top = 16
     object dxLayoutSkinLookAndFeel1: TdxLayoutSkinLookAndFeel
+      PixelsPerInch = 96
+    end
+    object dxLayoutStandardLookAndFeel1: TdxLayoutStandardLookAndFeel
       PixelsPerInch = 96
     end
   end
@@ -1729,7 +1727,11 @@ object frmMain: TfrmMain
     ConfirmDelete = False
     DBCheckLinks = <>
     VisibleButtons = [dxbnPrior, dxbnNext, dxbnInsert, dxbnDelete, dxbnEdit, dxbnPost, dxbnCancel, dxbnRefresh]
-    Left = 640
-    Top = 24
+    Left = 832
+    Top = 16
+  end
+  object Timer1: TTimer
+    Left = 48
+    Top = 456
   end
 end
